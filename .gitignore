@@ -1,0 +1,23 @@
+# node modules (kalau pakai npm)
+node_modules/
+
+# build / hasil compile
+dist/
+build/
+
+# file environment (rahasia)
+.env
+
+# log files
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# editor
+.vscode/
+.idea/
+
+# cache
+.cache/
