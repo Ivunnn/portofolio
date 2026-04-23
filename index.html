@@ -4,14 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Ivan Herdianto | Modern Web Developer</title>
+    <title>Ivan Herdianto | Web Developer</title>
     <meta name="title" content="Ivan Herdianto | Web Developer">
-    <meta name="description" content="Portofolio resmi Ivan Herdianto, seorang pengembang web modern yang berfokus pada ekosistem TALL stack, React, Next.js, dan integrasi Sistem Informasi Geografis (SIG).">
+    <meta name="description" content="Portofolio resmi Ivan Herdianto, saya adalah pengembang web yang berfokus pada ekosistem Laravel, React, Next.js.">
     <meta name="keywords" content="Ivan Herdianto, Web Developer, Fullstack Developer, TALL Stack, Laravel, React, Next.js, GIS, Pemetaan Bansos, UI/UX Design, Mojokerto">
     <meta name="author" content="Ivan Herdianto">
-    
-    <meta name="robots" content="index, follow">
-    
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://ivanherdianto-portofolio.vercel.app/">
 
     <meta property="og:type" content="website">
@@ -31,13 +29,46 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/Ivan_Herdianto.JPG">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/Ivan_Herdianto.JPG">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Person",
+      "name": "Ivan Herdianto",
+      "url": "https://ivanherdianto-portofolio.vercel.app/",
+      "image": "https://ivanherdianto-portofolio.vercel.app/assets/Ivan_Herdianto.JPG",
+      "sameAs": [
+        "https://github.com/Ivunnn"
+      ],
+      "jobTitle": "Web Developer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Freelance"
+      },
+      "alumniOf": {
+         "@type": "CollegeOrUniversity",
+         "name": "UPN \"Veteran\" Jawa Timur"
+      }
+    }
+    </script>
 </head>
 <body>
-    <nav class="navbar">
+    <div class="bg-glow blob-1"></div>
+    <div class="bg-glow blob-2"></div>
+
+    <header>
+        <nav class="navbar" aria-label="Main Navigation">
         <div class="logo">Ivan <span>Herdianto</span></div>
+        
+        <div class="hamburger">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -45,99 +76,113 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
+    </header>
 
-    <section id="home" class="hero">
-        <div class="hero-wrapper">
-            <div class="hero-content">
-                <p class="subtitle">Hello, I am</p>
-                <h1>Ivan Herdianto</h1>
-                <h2 class="typing-text">I am a <span id="typed-output"></span><span class="cursor">|</span></h2>
-                <p class="description">
-                    Informatics student at UPN "Veteran" Jawa Timur. Focused on building modern web applications. Ready to apply technical knowledge to contribute to software development projects, and highly interested in developing skills through practical industry experience.
-                </p>
-                <a href="assets/CV_Ivan Herdianto_2026.pdf" download="CV_Ivan_Herdianto_2026.pdf" class="btn primary-btn">Download CV</a>
-            </div>
-            
-            <div class="hero-image">
-                <img src="assets/Ivan_Herdianto.JPG" alt="Profile Picture">
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">Core Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <i class="fa-brands fa-laravel skill-icon"></i>
-                    <h3>TALL Stack</h3>
-                    <p>Experienced in building solid backends and systems using the Laravel framework.</p>
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-wrapper">
+                <div class="hero-content">
+                    <p class="subtitle">Hello, I am</p>
+                    <h1>Ivan Herdianto</h1>
+                    <h2 class="typing-text">I am a <span id="typed-output"></span><span class="cursor">|</span></h2>
+                    <p class="description">
+                        Informatics student at UPN "Veteran" Jawa Timur. Focused on building modern web applications. Ready to apply technical knowledge to contribute to software development projects, and highly interested in developing skills through practical industry experience.
+                    </p>
+                    <a href="assets/CV_Ivan Herdianto_2026.pdf" download="CV_Ivan_Herdianto_2026.pdf" class="btn primary-btn" aria-label="Download CV Ivan Herdianto">Download CV</a>
                 </div>
-                <div class="skill-card">
-                    <i class="fa-brands fa-react skill-icon"></i>
-                    <h3>React & Next.js</h3>
-                    <p>Creating interactive and responsive user interfaces for modern web experiences.</p>
-                </div>
-                <div class="skill-card">
-                    <i class="fa-solid fa-map-location-dot skill-icon"></i>
-                    <h3>GIS & Spatial Analysis</h3>
-                    <p>Capable of integrating spatial data and QGIS into web-based applications.</p>
-                </div>
-                <div class="skill-card">
-                    <i class="fa-brands fa-figma skill-icon"></i>
-                    <h3>UI/UX Design</h3>
-                    <p>Designing wireframes, mockups, and publication assets using Figma.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Selected Projects</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3>SIMPELKESOS</h3>
-                        <p>A Geographic Information System (GIS) application to map and analyze the distribution of social assistance recipients in Mojokerto Regency.</p>
-                        <div class="tags">
-                            <span>Laravel</span>
-                            <span>AdminLTE</span>
-                            <span>GeoJSON</span>
-                        </div>
-                        <div>
-                          <a href="https://github.com/Ivunnn/SIMPELKESOS" class="btn outline-btn" target="_blank">View Details</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3>SUKMA Project Platform</h3>
-                        <p>Publication, decoration concepts, and a centralized information platform for the KKN (Sustainability Kreatif Masyarakat) program.</p>
-                        <div class="tags">
-                            <span>Laravel</span>
-                            <span>AHP Algorithm</span>
-                            <span>AdminLTE</span>
-                        </div>
-                        <div>
-                          <a href="https://github.com/Ivunnn/Sistem-Rekrutmen-Pegawai-AHP-Profile-Matching" class="btn outline-btn" target="_blank">View Details</a>
-                        </div>
+                
+                <div class="hero-image">
+                    <div class="img-container">
+                        <img src="assets/Ivan_Herdianto.JPG" alt="Ivan Herdianto Profile Picture">
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Let's Collaborate</h2>
-            <p>Open for freelance opportunities and web development collaborations.</p>
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=herdiantoivan45@gmail.com" target="_blank" rel="noopener noreferrer" class="btn outline-btn">Contact Me</a>
-        </div>
-    </section>
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">Core Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-card fade-up">
+                        <i class="fa-brands fa-laravel skill-icon"></i>
+                        <h3>TALL Stack</h3>
+                        <p>Experienced in building solid backends and systems using the Laravel framework.</p>
+                    </div>
+                    <div class="skill-card fade-up">
+                        <i class="fa-brands fa-react skill-icon"></i>
+                        <h3>React & Next.js</h3>
+                        <p>Creating interactive and responsive user interfaces for modern web experiences.</p>
+                    </div>
+                    <div class="skill-card fade-up">
+                        <i class="fa-brands fa-figma skill-icon"></i>
+                        <h3>UI/UX Design</h3>
+                        <p>Designing wireframes, mockups, and publication assets using Figma.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2 class="section-title">Recent Projects</h2>
+                <div class="project-grid">
+                    <div class="project-card fade-up">
+                        <div class="project-content">
+                            <h3>SIMPELKESOS</h3>
+                            <p>A Geographic Information System (GIS) application to map and analyze the distribution of social assistance recipients in Mojokerto Regency.</p>
+                            <div class="tags">
+                                <span>Laravel</span>
+                                <span>AdminLTE</span>
+                                <span>GeoJSON</span>
+                            </div>
+                            <div class="card-action">
+                              <a href="https://github.com/Ivunnn/SIMPELKESOS" class="btn outline-btn" target="_blank" rel="noopener noreferrer">View Details <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card fade-up">
+                        <div class="project-content">
+                            <h3>Decision Support System for Employee Recruitment</h3>
+                            <p>A Website Based Decision Support System for Employee Recruitment using AHP Algorithm and Profile Matching method</p>
+                            <div class="tags">
+                                <span>Laravel</span>
+                                <span>AHP</span>
+                                <span>AdminLTE</span>
+                            </div>
+                            <div class="card-action">
+                              <a href="https://github.com/Ivunnn/Sistem-Rekrutmen-Pegawai-AHP-Profile-Matching" class="btn outline-btn" target="_blank" rel="noopener noreferrer">View Details <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card fade-up">
+                        <div class="project-content">
+                            <h3>Thrifting Bussiness Landing Page</h3>
+                            <p>A modern landing page for a thrifting business, showcasing products and providing a seamless user experience.</p>
+                            <div class="tags">
+                                <span>Laravel</span>
+                                <span>Fillament</span>
+                                <span>Tailwind</span>
+                            </div>
+                            <div class="card-action">
+                              <a href="https://secondchance.web.id/" class="btn outline-btn" target="_blank" rel="noopener noreferrer">View Details <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact fade-up">
+            <div class="container">
+                <h2 class="section-title">Let's Collaborate</h2>
+                <p>Open for freelance opportunities and web development collaborations.</p>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=herdiantoivan45@gmail.com" target="_blank" rel="noopener noreferrer" class="btn primary-btn glow-btn">Contact Me</a>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2026 Ivan Herdianto. Built from scratch.</p>
+        <p>&copy; 2026 Ivan Herdianto. Designed & Built with passion.</p>
     </footer>
 
     <script src="script.js"></script>
