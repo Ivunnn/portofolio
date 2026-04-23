@@ -117,13 +117,21 @@ body {
   transition: all 0.3s ease;
 }
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: 800;
-  letter-spacing: -0.5px;
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: transform 0.3s ease;
 }
-.logo span {
-  color: var(--accent-color);
+
+.logo-link:hover {
+    transform: scale(1.05); /* Sedikit membesar saat di-hover */
+}
+
+.nav-logo {
+    height: 40px; /* Tinggi ideal untuk navbar, bisa Anda sesuaikan */
+    width: auto;
+    display: block;
 }
 
 .nav-links {
