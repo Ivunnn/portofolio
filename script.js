@@ -1,4 +1,4 @@
-const words = ["Web Developer.", "Undergraduate Student."];
+const words = ["Web Developer."];
 let i = 0;
 let timer;
 let isDeleting = false;

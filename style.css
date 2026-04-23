@@ -9,9 +9,30 @@
   --card-border: rgba(255, 255, 255, 0.05);
 }
 
-html, body {
-    overflow-x: hidden;
-    width: 100%;
+/* Untuk Firefox */
+html {
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-color) var(--bg-color);
+}
+
+/* Untuk Chrome, Edge, Safari, dan Opera */
+::-webkit-scrollbar {
+    width: 10px; /* Lebar scrollbar vertikal */
+    height: 10px; /* Tinggi scrollbar horizontal (jika ada) */
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-color); /* Warna jalur scrollbar (gelap) */
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent-color); /* Warna pegangan scrollbar (biru aksen) */
+    border-radius: 10px; /* Ujung membulat yang elegan */
+    border: 2px solid var(--bg-color); /* Memberikan efek padding/ruang kosong di sisi scrollbar */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-hover); /* Warna sedikit lebih terang saat di-hover */
 }
 
 .hamburger {
@@ -20,13 +41,6 @@ html, body {
     font-size: 1.8rem;
     color: var(--text-color);
     z-index: 1001;
-}
-
-.nav-links a.active {
-    color: var(--accent-color);
-}
-.nav-links a.active::after {
-    width: 100%;
 }
 
 img {
@@ -220,7 +234,7 @@ body {
 
 /* Typing Effect */
 .typing-text {
-  font-size: 2rem;
+  font-size: 1.75rem;
   margin-bottom: 25px;
   font-weight: 400;
   color: #cbd5e1;
