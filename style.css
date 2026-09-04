@@ -70,6 +70,18 @@ body {
   position: relative;
 }
 
+/* Scroll progress bar */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--accent-color), #8b5cf6);
+  z-index: 1200;
+  transition: width 0.1s ease-out;
+}
+
 /* Background Ambient Glows */
 .bg-glow {
   position: fixed;
@@ -78,6 +90,8 @@ body {
   z-index: -1;
   opacity: 0.4;
   pointer-events: none;
+  will-change: transform;
+  transition: transform 0.1s linear;
 }
 .blob-1 {
   top: -10%;
@@ -114,7 +128,14 @@ body {
   width: 100%;
   top: 0;
   z-index: 1000;
-  transition: all 0.3s ease;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Navbar mengecil saat discroll */
+.navbar.scrolled {
+  padding: 12px 50px;
+  background: rgba(11, 17, 32, 0.92);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
 }
 
 .logo-link {
@@ -125,13 +146,18 @@ body {
 }
 
 .logo-link:hover {
-    transform: scale(1.05); /* Sedikit membesar saat di-hover */
+    transform: scale(1.05) rotate(-4deg); /* Sedikit membesar & miring saat di-hover */
 }
 
 .nav-logo {
     height: 40px; /* Tinggi ideal untuk navbar, bisa Anda sesuaikan */
     width: auto;
     display: block;
+    transition: height 0.35s ease;
+}
+
+.navbar.scrolled .nav-logo {
+    height: 32px;
 }
 
 .nav-links {
@@ -160,7 +186,8 @@ body {
 .nav-links a:hover {
   color: var(--accent-color);
 }
-.nav-links a:hover::after {
+.nav-links a:hover::after,
+.nav-links a.active::after {
   width: 100%;
 }
 
@@ -212,6 +239,25 @@ body {
   font-weight: 300;
 }
 
+/* Hero load-in sequence: satu momen entrance yang terorkestrasi saat halaman dibuka */
+.hero-item {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+#heroContent.loaded .hero-item,
+.hero-image.loaded {
+  opacity: 1;
+  transform: translateY(0);
+}
+#heroContent.loaded .subtitle { transition-delay: 0.05s; }
+#heroContent.loaded h1 { transition-delay: 0.18s; }
+#heroContent.loaded .typing-text { transition-delay: 0.32s; }
+#heroContent.loaded .description { transition-delay: 0.46s; }
+#heroContent.loaded .hero-buttons { transition-delay: 0.6s; }
+.hero-image.hero-item { transition-delay: 0.3s; }
+
 /* Profile Image Floating Animation */
 .hero-image {
   flex: 1;
@@ -234,6 +280,7 @@ body {
   z-index: -1;
   opacity: 0.5;
   filter: blur(20px);
+  animation: pulse-glow 4s ease-in-out infinite;
 }
 .hero-image img {
   width: 100%;
@@ -242,6 +289,10 @@ body {
   object-fit: cover;
   aspect-ratio: 1/1;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.img-container:hover img {
+  transform: scale(1.04);
 }
 
 @keyframes float {
@@ -253,6 +304,17 @@ body {
   }
   100% {
     transform: translateY(0px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.4;
+    filter: blur(20px);
+  }
+  50% {
+    opacity: 0.7;
+    filter: blur(28px);
   }
 }
 
@@ -339,6 +401,15 @@ section {
   border-radius: 2px;
 }
 
+/* Garis bawah judul section tumbuh saat masuk viewport */
+.section-title.title-reveal::after {
+  width: 0;
+  transition: width 0.7s cubic-bezier(0.4, 0, 0.2, 1) 0.15s;
+}
+.section-title.title-reveal.visible::after {
+  width: 60px;
+}
+
 /* Cards Glassmorphism (Skills & Projects) */
 .skill-card,
 .project-card {
@@ -347,7 +418,8 @@ section {
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid var(--card-border);
   border-radius: 16px;
-  transition: all 0.4s ease;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.4s ease, box-shadow 0.4s ease;
 }
 
 /* Skills */
@@ -371,6 +443,11 @@ section {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 20px;
+  display: inline-block;
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.skill-card:hover .skill-icon {
+  transform: scale(1.15) rotate(-6deg);
 }
 .skill-card h3 {
   margin-bottom: 15px;
@@ -394,6 +471,7 @@ section {
 .project-card:hover {
   transform: translateY(-8px);
   border-color: rgba(59, 130, 246, 0.3);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
 }
 .project-content {
   padding: 35px;
@@ -424,6 +502,13 @@ section {
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.5px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.project-card:hover .tags span {
+  background-color: rgba(59, 130, 246, 0.2);
+}
+.tags span:hover {
+  transform: translateY(-2px);
 }
 .card-action {
   margin-top: auto;
@@ -446,7 +531,66 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Animation Classes for JS */
+/* Tombol kembali ke atas */
+.back-to-top {
+  position: fixed;
+  right: 28px;
+  bottom: 28px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid var(--card-border);
+  background: rgba(30, 41, 59, 0.8);
+  backdrop-filter: blur(10px);
+  color: var(--text-color);
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 900;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(16px);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.back-to-top:hover {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+}
+
+/* Animation Classes for JS: variasi arah reveal saat discroll */
+.reveal {
+  opacity: 0;
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-up {
+  transform: translateY(30px);
+}
+.reveal-left {
+  transform: translateX(-50px);
+}
+.reveal-right {
+  transform: translateX(50px);
+}
+.reveal-zoom {
+  transform: scale(0.88);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translate(0, 0) scale(1);
+}
+
+/* Compatibility: kelas lama fade-up diperlakukan sama seperti reveal-up */
 .fade-up {
   opacity: 0;
   transform: translateY(30px);
@@ -459,6 +603,19 @@ footer {
   transform: translateY(0);
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .fade-up,
+  .hero-item,
+  .img-container,
+  .img-container::before {
+    transition: none !important;
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .hero-buttons {
@@ -466,6 +623,9 @@ footer {
   }
   .navbar {
     padding: 15px 30px;
+  }
+  .navbar.scrolled {
+    padding: 10px 30px;
   }
 
   /* Munculkan Hamburger */
@@ -511,5 +671,11 @@ footer {
   }
   .img-container {
     max-width: 280px;
+  }
+  .back-to-top {
+    right: 18px;
+    bottom: 18px;
+    width: 42px;
+    height: 42px;
   }
 }

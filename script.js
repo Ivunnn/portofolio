@@ -1,4 +1,4 @@
-const words = ["Web Developer."];
+const words = ["a Web Developer.", "an Informatics Graduate."];
 let i = 0;
 let timer;
 let isDeleting = false;
@@ -44,9 +44,21 @@ function typeEffect() {
 
 document.addEventListener("DOMContentLoaded", function() {
   typeEffect();
+
+  // Momen entrance hero: memicu animasi berurutan begitu halaman siap
+  const heroContent = document.getElementById("heroContent");
+  const heroImage = document.querySelector(".hero-image.hero-item");
+  requestAnimationFrame(() => {
+    setTimeout(() => {
+      if (heroContent) heroContent.classList.add("loaded");
+      if (heroImage) heroImage.classList.add("loaded");
+    }, 80);
+  });
 });
 
-// Advanced Scroll Reveal with Stagger Effect
+/* =========================================
+   SCROLL REVEAL (dengan variasi arah: up, left, right, zoom)
+========================================= */
 const observerOptions = {
   root: null,
   rootMargin: '0px',
@@ -56,21 +68,21 @@ const observerOptions = {
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      // Add visible class
       entry.target.classList.add('visible');
-      // Unobserve after animating once to improve performance
       observer.unobserve(entry.target);
     }
   });
 }, observerOptions);
 
-// Select all elements with fade-up class
-const fadeElements = document.querySelectorAll('.fade-up');
+// Elemen dengan animasi reveal saat scroll (kartu skill/project, section title, dsb)
+const revealElements = document.querySelectorAll('.reveal, .fade-up, .title-reveal');
 
-fadeElements.forEach((el, index) => {
-  // Optional: add slight delay based on order for grid items
+revealElements.forEach((el, index) => {
+  // Beri sedikit delay bertahap khusus untuk grid card agar muncul berurutan
   if (el.classList.contains('skill-card') || el.classList.contains('project-card')) {
-    el.style.transitionDelay = `${(index % 3) * 0.15}s`;
+    const siblings = el.parentElement.children;
+    const localIndex = Array.prototype.indexOf.call(siblings, el);
+    el.style.transitionDelay = `${(localIndex % 3) * 0.15}s`;
   }
   observer.observe(el);
 });
@@ -107,18 +119,47 @@ navItems.forEach(item => {
 });
 
 /* =========================================
-   2. NAVBAR ACTIVE STATE ON SCROLL
+   2. NAVBAR ACTIVE STATE + SHRINK ON SCROLL
 ========================================= */
 const sections = document.querySelectorAll('section');
+const navbar = document.querySelector('.navbar');
+const scrollProgress = document.getElementById('scrollProgress');
+const backToTopBtn = document.getElementById('backToTop');
+const blob1 = document.getElementById('blob1');
+const blob2 = document.getElementById('blob2');
 
-window.addEventListener('scroll', () => {
+let ticking = false;
+
+function handleScroll() {
+    const scrollY = window.pageYOffset;
+
+    // Navbar mengecil & lebih solid saat discroll
+    if (navbar) {
+        navbar.classList.toggle('scrolled', scrollY > 40);
+    }
+
+    // Progress bar scroll di bagian atas halaman
+    if (scrollProgress) {
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = docHeight > 0 ? (scrollY / docHeight) * 100 : 0;
+        scrollProgress.style.width = `${progress}%`;
+    }
+
+    // Tombol back-to-top muncul setelah scroll cukup jauh
+    if (backToTopBtn) {
+        backToTopBtn.classList.toggle('show', scrollY > 500);
+    }
+
+    // Efek parallax halus pada blob latar belakang
+    if (blob1) blob1.style.transform = `translateY(${scrollY * 0.12}px)`;
+    if (blob2) blob2.style.transform = `translateY(${scrollY * -0.1}px)`;
+
+    // Deteksi section aktif untuk navigasi
     let current = '';
-
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
-        // Deteksi jika user sedang berada di section tersebut
-        if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
+        if (scrollY >= (sectionTop - sectionHeight / 3)) {
             current = section.getAttribute('id');
         }
     });
@@ -129,7 +170,26 @@ window.addEventListener('scroll', () => {
             item.classList.add('active');
         }
     });
+
+    ticking = false;
+}
+
+window.addEventListener('scroll', () => {
+    if (!ticking) {
+        window.requestAnimationFrame(handleScroll);
+        ticking = true;
+    }
 });
+
+// Jalankan sekali di awal supaya state sesuai posisi scroll saat reload
+handleScroll();
+
+// Klik tombol back-to-top untuk scroll halus ke atas
+if (backToTopBtn) {
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
 
 /* =========================================
    3. BASIC SECURITY (ANTI-INSPECT & COPY)
