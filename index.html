@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Ivan Herdianto | Web Developer</title>
+    <title>Ivan Herdianto | Portfolio Web</title>
+
+    <!-- Meta Tags -->
     <meta name="title" content="Ivan Herdianto | Web Developer">
-    <meta name="description" content="Portofolio resmi Ivan Herdianto, saya adalah pengembang web yang berfokus pada ekosistem Laravel, React, Next.js.">
-    <meta name="keywords" content="Ivan Herdianto, Web Developer, Fullstack Developer, TALL Stack, Laravel, React, Next.js, GIS, Pemetaan Bansos, UI/UX Design, Mojokerto">
+    <meta name="description"
+        content="Portofolio resmi Ivan Herdianto, saya adalah pengembang web dengan spesialisasi pada ekosistem Laravel, React, Next.js.">
+    <meta name="keywords"
+        content="Ivan Herdianto, Web Developer, Fullstack Developer, TALL Stack, Laravel, React, Next.js, GIS, Pemetaan Bansos, UI/UX Design, Web Developer Mojokerto, Web Developer Indonesia, Web Developer Surabaya, Web Developer Jawa Timur">
     <meta name="author" content="Ivan Herdianto">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://ivanherdianto-portofolio.vercel.app/">
@@ -15,13 +19,15 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ivanherdianto-portofolio.vercel.app/">
     <meta property="og:title" content="Ivan Herdianto | Web Developer">
-    <meta property="og:description" content="Portofolio resmi Ivan Herdianto, seorang pengembang web modern yang berfokus pada ekosistem TALL stack, React, Next.js, dan integrasi Sistem Informasi Geografis (SIG).">
+    <meta property="og:description"
+        content="Portofolio resmi Ivan Herdianto, seorang pengembang web modern yang berfokus pada ekosistem TALL stack, React, Next.js, dan integrasi Sistem Informasi Geografis (SIG).">
     <meta property="og:image" content="https://ivanherdianto-portofolio.vercel.app/assets/og-image.jpg">
 
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://ivanherdianto-portofolio.vercel.app/">
     <meta property="twitter:title" content="Ivan Herdianto | Web Developer">
-    <meta property="twitter:description" content="Portofolio resmi Ivan Herdianto, seorang pengembang web modern yang berfokus pada ekosistem TALL stack, React, Next.js, dan integrasi Sistem Informasi Geografis (SIG).">
+    <meta property="twitter:description"
+        content="Portofolio resmi Ivan Herdianto, seorang pengembang web modern yang berfokus pada ekosistem TALL stack, React, Next.js, dan integrasi Sistem Informasi Geografis (SIG).">
     <meta property="twitter:image" content="https://ivanherdianto-portofolio.vercel.app/assets/twitter-image.jpg">
 
     <link rel="icon" type="image/x-icon" href="assets/favicon.svg">
@@ -29,177 +35,640 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon.svg">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon.svg">
 
+    <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
-    <meta name="google-site-verification" content="RVbmgTR6fHmbvq6MqWHIpE_xAScnf2GkS8LxQwPvBAE" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org/",
-      "@type": "Person",
-      "name": "Ivan Herdianto",
-      "url": "https://ivanherdianto-portofolio.vercel.app/",
-      "image": "https://ivanherdianto-portofolio.vercel.app/assets/Ivan_Herdianto.JPG",
-      "sameAs": [
-        "https://github.com/Ivunnn"
-      ],
-      "jobTitle": "Web Developer",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Freelance"
-      },
-      "alumniOf": {
-         "@type": "CollegeOrUniversity",
-         "name": "UPN \"Veteran\" Jawa Timur"
-      }
-    }
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#0b1120',
+                            card: '#1e293b',
+                            primary: '#3b82f6', // Blue
+                            secondary: '#8b5cf6', // Purple
+                            accent: '#06b6d4' // Cyan
+                        }
+                    },
+                    animation: {
+                        'blob': 'blob 7s infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
     </script>
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #0b1120;
+            color: #f8fafc;
+            overflow-x: hidden;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0b1120;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #3b82f6;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #8b5cf6;
+        }
+
+        /* Background Grid */
+        .bg-grid {
+            background-size: 50px 50px;
+            background-image:
+                linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+        }
+
+        /* Glassmorphism utilities */
+        .glass {
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Reveal Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Text Gradient */
+        .text-gradient {
+            background: linear-gradient(to right, #3b82f6, #8b5cf6, #06b6d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 200% auto;
+            animation: textShine 4s linear infinite;
+        }
+
+        @keyframes textShine {
+            to {
+                background-position: 200% center;
+            }
+        }
+
+        /* Typing cursor */
+        .typing-cursor::after {
+            content: '|';
+            animation: blink 1s step-end infinite;
+            color: #3b82f6;
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        /* ===== Preloader ===== */
+        body.is-loading {
+            overflow: hidden;
+        }
+
+        #preloader {
+            position: fixed;
+            inset: 0;
+            z-index: 100;
+            background: #0b1120;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2.5rem;
+            transition: opacity 0.9s ease 0.35s;
+        }
+
+        #preloader.leaving {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        /* Wrapper: mengatur zoom saat keluar */
+        .pre-logo-wrap {
+            position: relative;
+            width: 96px;
+            height: 96px;
+            transition: transform 1.5s cubic-bezier(0.76, 0, 0.24, 1);
+            will-change: transform;
+        }
+
+        #preloader.leaving .pre-logo-wrap {
+            transform: scale(700);
+        }
+
+        /* Logo: animasi masuk */
+        .pre-logo {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            opacity: 0;
+            transform: scale(0.5);
+            animation: logoIn 5s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+        }
+
+        /* Glow di belakang logo */
+        .pre-glow {
+            position: absolute;
+            inset: -40%;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.45), rgba(139, 92, 246, 0.2) 50%, transparent 70%);
+            filter: blur(20px);
+            opacity: 0;
+            animation: glowIn 1.2s ease 0.3s forwards, glowPulse 2.5s ease-in-out 1.5s infinite;
+            transition: opacity 0.4s ease;
+        }
+
+        #preloader.leaving .pre-glow {
+            opacity: 0 !important;
+            animation: none;
+        }
+
+        /* Progress bar tipis */
+        .pre-bar {
+            width: 160px;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 2px;
+            overflow: hidden;
+            opacity: 0;
+            animation: preFade 0.8s ease 0.6s forwards;
+            transition: opacity 0.3s ease;
+        }
+
+        #preloader.leaving .pre-bar {
+            opacity: 0 !important;
+            animation: none;
+        }
+
+        #pre-bar-fill {
+            height: 100%;
+            background: linear-gradient(to right, #3b82f6, #8b5cf6, #06b6d4);
+            transform: scaleX(0);
+            transform-origin: left;
+        }
+
+        @keyframes logoIn {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes glowIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes glowPulse {
+            50% {
+                transform: scale(1.15);
+                opacity: 0.7;
+            }
+        }
+
+        @keyframes preFade {
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
 </head>
-<body>
-    <!-- Scroll progress bar -->
-    <div class="scroll-progress" id="scrollProgress"></div>
 
-    <div class="bg-glow blob-1" id="blob1"></div>
-    <div class="bg-glow blob-2" id="blob2"></div>
+<body class="is-loading antialiased selection:bg-brand-secondary selection:text-white relative">
 
-    <header>
-        <nav class="navbar" aria-label="Main Navigation">
-            <a href="#home" class="logo-link">
-                <img src="assets/favicon.svg" alt="Ivan Herdianto Logo" class="nav-logo">
+    <!-- Preloader -->
+    <div id="preloader" aria-hidden="true">
+        <div class="pre-logo-wrap">
+            <div class="pre-glow"></div>
+            <img src="/assets/favicon.svg" alt="" class="pre-logo">
+        </div>
+        <div class="pre-bar">
+            <div id="pre-bar-fill"></div>
+        </div>
+    </div>
+
+    <!-- Ambient Background Blobs -->
+    <div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
+        <div
+            class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-brand-primary/20 rounded-full mix-blend-screen filter blur-[100px] animate-blob">
+        </div>
+        <div
+            class="absolute top-[20%] right-[-10%] w-96 h-96 bg-brand-secondary/20 rounded-full mix-blend-screen filter blur-[100px] animate-blob animation-delay-2000">
+        </div>
+        <div
+            class="absolute bottom-[-20%] left-[20%] w-[30rem] h-[30rem] bg-brand-accent/10 rounded-full mix-blend-screen filter blur-[120px] animate-blob animation-delay-4000">
+        </div>
+        <div class="absolute inset-0 bg-grid pointer-events-none"></div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="fixed top-0 left-0 h-1 bg-gradient-to-r from-brand-primary to-brand-secondary z-50 transition-all duration-150 ease-out"
+        id="scroll-progress" style="width: 0%"></div>
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed w-full z-40 transition-all duration-300 py-6 px-6 md:px-12">
+        <div class="max-w-7xl mx-auto flex justify-between items-center glass rounded-2xl px-6 py-3">
+            <a href="#home" class="text-xl font-bold tracking-tighter flex items-center gap-2 group">
+                <div
+                    class="w-8 h-8 rounded-lg bg-gradient-to-br flex items-center justify-center text-white font-black group-hover:rotate-12 transition-transform">
+                    <img src="/assets/favicon.svg" alt="Logo" class="w-5 h-5">
+                </div>
             </a>
-            
-            <div class="hamburger">
-                <i class="fa-solid fa-bars"></i>
-            </div>
 
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex space-x-8 items-center">
+                <li><a href="#home"
+                        class="text-sm font-medium text-gray-300 hover:text-white transition-colors relative group">Home
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-primary transition-all group-hover:w-full"></span>
+                    </a></li>
+                <li><a href="#about"
+                        class="text-sm font-medium text-gray-300 hover:text-white transition-colors relative group">About
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-primary transition-all group-hover:w-full"></span>
+                    </a></li>
+                <li><a href="#projects"
+                        class="text-sm font-medium text-gray-300 hover:text-white transition-colors relative group">Projects
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-primary transition-all group-hover:w-full"></span>
+                    </a></li>
+                <li><a href="#contact"
+                        class="px-5 py-2 text-sm font-semibold rounded-full bg-white/5 border border-white/10 hover:bg-brand-primary hover:border-brand-primary transition-all">Contact
+                        Me</a></li>
             </ul>
-        </nav>
-    </header>
 
-    <main>
-        <section id="home" class="hero">
-            <div class="hero-wrapper">
-                <div class="hero-content" id="heroContent">
-                    <p class="subtitle hero-item">Hello, I am</p>
-                    <h1 class="hero-item">Ivan Herdianto</h1>
-                    <h2 class="typing-text hero-item">I am <span id="typed-output"></span><span class="cursor">|</span></h2>
-                    <p class="description hero-item">
-                        Informatics student at UPN "Veteran" Jawa Timur. Focused on building modern web applications. Ready to apply technical knowledge to contribute to software development projects, and highly interested in developing skills through practical industry experience.
+            <!-- Mobile Hamburger -->
+            <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white text-2xl focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu"
+            class="absolute top-24 left-6 right-6 glass rounded-2xl flex flex-col items-center py-6 space-y-4 opacity-0 pointer-events-none transform -translate-y-4 transition-all duration-300 md:hidden">
+            <a href="#home" class="text-lg font-medium text-gray-300 mobile-link">Home</a>
+            <a href="#about" class="text-lg font-medium text-gray-300 mobile-link">About</a>
+            <a href="#projects" class="text-lg font-medium text-gray-300 mobile-link">Projects</a>
+            <a href="#contact"
+                class="px-6 py-2 mt-2 text-md font-semibold rounded-full bg-brand-primary text-white mobile-link">Contact
+                Me</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home"
+        class="min-h-screen flex items-center justify-center pt-36 pb-12 md:pt-20 md:pb-0 px-6 md:px-12 relative">
+        <div class="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+            <!-- Hero Text -->
+            <div class="order-2 md:order-1 flex flex-col space-y-6 reveal">
+                <div
+                    class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-brand-primary/30 bg-brand-primary/10 w-max">
+                    <span class="relative flex h-2.5 w-2.5">
+                        <span
+                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-primary opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-brand-primary"></span>
+                    </span>
+                    <span class="text-xs font-medium text-brand-primary uppercase tracking-wider">Available for
+                        work</span>
+                </div>
+
+                <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-white leading-tight">
+                    Hello, I am <br>
+                    <span class="text-gradient">Ivan Herdianto</span>
+                </h1>
+
+                <h2 class="text-2xl md:text-2xl font-medium text-gray-400">
+                    I am <span id="typewriter" class="text-white typing-cursor"></span>
+                </h2>
+
+                <p class="text-gray-400 text-lg md:text-xl max-w-lg leading-relaxed">
+                    Informatics Fresh Graduate from UPN "Veteran" Jawa Timur. Focused on building modern web
+                    applications. Ready to apply technical knowledge to contribute to software development projects, and
+                    highly interested in developing skills through practical industry experience.
+                </p>
+
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <a href="/assets/CV_Ivan Herdianto_2026.pdf" target="_blank"
+                        class="px-8 py-3 rounded-xl glass text-white font-semibold hover:-translate-y-1 hover:bg-white/10 transition-all flex items-center gap-2">
+                        Download CV <i class="fa-solid fa-arrow-down text-sm"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ivan-herdianto/" target="_blank"
+                        class="px-8 py-3 bg-brand-primary rounded-xl glass text-white font-semibold hover:-translate-y-1 hover:bg-white/10 transition-all flex items-center gap-2">
+                        <i class="fa-brands fa-linkedin text-xl"></i> LinkedIn
+                    </a>
+                    <a href="https://www.github.com/Ivunnn" target="_blank"
+                        class="px-8 py-3 rounded-xl glass text-white font-semibold hover:-translate-y-1 hover:bg-white/10 transition-all flex items-center gap-2">
+                        <i class="fa-brands fa-github text-xl"></i> GitHub
+                    </a>
+                </div>
+            </div>
+
+            <!-- Hero Image -->
+            <div class="order-1 md:order-2 flex justify-center md:justify-end reveal">
+                <div class="relative w-72 h-72 md:w-96 md:h-96 animate-float">
+                    <!-- Glowing backplate -->
+                    <div
+                        class="absolute inset-0 bg-gradient-to-tr from-brand-primary to-brand-secondary rounded-full blur-2xl opacity-40 animate-pulse-slow">
+                    </div>
+                    <!-- Image container -->
+                    <div class="absolute inset-0 p-2 rounded-full glass border border-white/20">
+                        <img src="/assets/anjay.jpg" alt="Ivan Herdianto"
+                            class="w-full h-full object-cover rounded-full border-4 border-transparent bg-clip-border"
+                            onerror="this.src='/assets/anjay.jpg';">
+                    </div>
+
+                    <!-- Floating Tech Badges -->
+                    <div class="absolute -top-4 -left-4 glass px-4 py-2 rounded-xl flex items-center gap-2 animate-float"
+                        style="animation-delay: -2s;">
+                        <i class="fa-brands fa-laravel text-[#FF2D20] text-xl"></i>
+                        <span class="text-sm font-semibold">Laravel</span>
+                    </div>
+                    <div class="absolute bottom-10 -right-8 glass px-4 py-2 rounded-xl flex items-center gap-2 animate-float"
+                        style="animation-delay: -4s;">
+                        <i class="devicon-nextjs-plain text-white text-xl"></i>
+                        <span class="text-sm font-semibold">Next.js</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills / About Section -->
+    <section id="about" class="py-24 px-6 md:px-12 relative z-10">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-sm font-bold text-brand-primary uppercase tracking-widest mb-2">My Expertise</h2>
+                <h3 class="text-4xl font-extrabold text-white">Core Skills</h3>
+                <div class="w-16 h-1 bg-brand-primary mx-auto mt-6 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Skill Card 1 -->
+                <div
+                    class="glass p-8 rounded-3xl reveal tilt-card cursor-pointer border border-white/5 hover:border-brand-primary/50 transition-colors group">
+                    <div
+                        class="w-14 h-14 rounded-2xl bg-brand-primary/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i
+                            class="fa-brands fa-laravel text-3xl text-brand-primary group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold text-white mb-3">TALL Stack</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Experienced in building solid backends and dynamic frontend systems using Tailwind, Alpine.js,
+                        Laravel, and Livewire.
                     </p>
-                    <div class="hero-buttons hero-item">
-                        <a href="assets/CV_Ivan Herdianto_2026.pdf" download="CV_Ivan_Herdianto_2026.pdf" class="btn primary-btn" aria-label="Download CV Ivan Herdianto">Download CV</a>
-                        <a href="https://github.com/Ivunnn" target="_blank" rel="noopener noreferrer" class="btn outline-btn" aria-label="View GitHub Profile">View GitHub Profile</a>
-                    </div>
                 </div>
-                
-                <div class="hero-image hero-item">
-                    <div class="img-container">
-                        <img src="assets/anjay.jpg" alt="Ivan Herdianto Profile Picture">
+
+                <!-- Skill Card 2 -->
+                <div class="glass p-8 rounded-3xl reveal tilt-card cursor-pointer border border-white/5 hover:border-brand-secondary/50 transition-colors group"
+                    style="transition-delay: 100ms;">
+                    <div
+                        class="w-14 h-14 rounded-2xl bg-brand-secondary/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i
+                            class="fa-brands fa-react text-3xl text-brand-secondary group-hover:text-white transition-colors"></i>
                     </div>
+                    <h4 class="text-2xl font-bold text-white mb-3">RILT Stack</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Building highly interactive, SPA-like web applications by combining the reactivity of React.js
+                        and Tailwind CSS with a powerful Laravel backend via Inertia.js.
+                    </p>
+                </div>
+
+                <!-- Skill Card 3 -->
+                <div class="glass p-8 rounded-3xl reveal tilt-card cursor-pointer border border-white/5 hover:border-brand-accent/50 transition-colors group"
+                    style="transition-delay: 200ms;">
+                    <div
+                        class="w-14 h-14 rounded-2xl bg-brand-accent/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i
+                            class="fa-brands fa-vuejs text-3xl text-brand-accent group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold text-white mb-3">VILT Stack</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Developing fast, reactive single-page applications using Vue.js and Tailwind CSS, seamlessly
+                        integrated with Laravel via Inertia.js to build dynamic dashboards.
+                    </p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="about" class="about">
-            <div class="container">
-                <h2 class="section-title title-reveal">Core Skills</h2>
-                <div class="skills-grid">
-                    <div class="skill-card reveal reveal-zoom">
-                        <i class="fa-brands fa-laravel skill-icon"></i>
-                        <h3>TALL Stack</h3>
-                        <p>Experienced in building solid backends and systems using the Laravel framework.</p>
-                    </div>
-                    <div class="skill-card reveal reveal-zoom">
-                        <i class="fa-brands fa-react skill-icon"></i>
-                        <h3>React & Next.js</h3>
-                        <p>Creating interactive and responsive user interfaces for modern web experiences.</p>
-                    </div>
-                    <div class="skill-card reveal reveal-zoom">
-                        <i class="fa-brands fa-figma skill-icon"></i>
-                        <h3>UI/UX Design</h3>
-                        <p>Designing wireframes, mockups, and publication assets using Figma.</p>
-                    </div>
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 px-6 md:px-12 relative z-10">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 reveal">
+                <div>
+                    <h2 class="text-sm font-bold text-brand-primary uppercase tracking-widest mb-2">Portfolio</h2>
+                    <h3 class="text-4xl font-extrabold text-white">Recent Projects</h3>
                 </div>
+                <a href="https://github.com/Ivunnn" target="_blank"
+                    class="mt-6 md:mt-0 text-brand-primary hover:text-white transition-colors flex items-center gap-2 font-medium">
+                    View all on GitHub <i class="fa-solid fa-arrow-right"></i>
+                </a>
             </div>
-        </section>
 
-        <section id="projects" class="projects">
-            <div class="container">
-                <h2 class="section-title title-reveal">Recent Projects</h2>
-                <div class="project-grid">
-                    <div class="project-card reveal reveal-left">
-                        <div class="project-content">
-                            <h3>SIMPELKESOS</h3>
-                            <p>A Geographic Information System (GIS) application to map and analyze the distribution of social assistance recipients in Mojokerto Regency.</p>
-                            <div class="tags">
-                                <span>Laravel</span>
-                                <span>AdminLTE</span>
-                                <span>Leaflet.js</span>
-                            </div>
-                            <div class="card-action">
-                              <a href="https://github.com/Ivunnn/SIMPELKESOS" class="btn outline-btn" target="_blank" rel="noopener noreferrer">View Details <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div
+                    class="glass rounded-3xl overflow-hidden reveal tilt-card flex flex-col group border border-white/5 hover:border-white/20 transition-colors">
+                    <div class="h-48 w-full bg-slate-800 relative overflow-hidden">
+                        <!-- Mockup Image / Gradient Placeholder -->
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-blue-900 to-slate-800 opacity-80 group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fa-solid fa-map-location-dot text-5xl text-white/50"></i>
                         </div>
                     </div>
-                    <div class="project-card reveal reveal-up">
-                        <div class="project-content">
-                            <h3>Decision Support System for Employee Recruitment</h3>
-                            <p>A Website Based Decision Support System for Employee Recruitment using AHP Algorithm and Profile Matching method</p>
-                            <div class="tags">
-                                <span>Laravel</span>
-                                <span>AHP</span>
-                                <span>AdminLTE</span>
-                            </div>
-                            <div class="card-action">
-                              <a href="https://github.com/Ivunnn/Sistem-Rekrutmen-Pegawai-AHP-Profile-Matching" class="btn outline-btn" target="_blank" rel="noopener noreferrer">View Details <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                            </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h4 class="text-xl font-bold text-white mb-3 group-hover:text-brand-primary transition-colors">
+                            SIMPELKESOS</h4>
+                        <p class="text-gray-400 text-sm mb-6 flex-grow">
+                            A Geographic Information System (GIS) application to map and analyze the distribution of
+                            social assistance recipients in Mojokerto Regency.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span
+                                class="px-3 py-1 text-xs font-medium bg-brand-primary/10 text-brand-primary rounded-full border border-brand-primary/20">Laravel</span>
+                            <span
+                                class="px-3 py-1 text-xs font-medium bg-white/5 text-gray-300 rounded-full border border-white/10">Leaflet.js</span>
+                            <span
+                                class="px-3 py-1 text-xs font-medium bg-white/5 text-gray-300 rounded-full border border-white/10">AdminLTE</span>
+                        </div>
+                        <a href="https://github.com/Ivunnn/SIMPELKESOS" target="_blank"
+                            class="inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-brand-primary transition-colors">
+                            <i class="fa-brands fa-github text-lg"></i> Source Code
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="glass rounded-3xl overflow-hidden reveal tilt-card flex flex-col group border border-white/5 hover:border-white/20 transition-colors"
+                    style="transition-delay: 100ms;">
+                    <div class="h-48 w-full bg-slate-800 relative overflow-hidden">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-purple-900 to-slate-800 opacity-80 group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fa-solid fa-users-gear text-5xl text-white/50"></i>
                         </div>
                     </div>
-                    <div class="project-card reveal reveal-right">
-                        <div class="project-content">
-                            <h3>Waste management educational website</h3>
-                            <p>An educational website focused on waste management practices, providing information and resources for the community with machine learning integration.</p>
-                            <div class="tags">
-                                <span>Laravel</span>
-                                <span>Hugging Face</span>
-                                <span>Tailwind</span>
-                            </div>
-                            <div class="card-action">
-                              <a href="https://github.com/Ivunnn/CycleTech" class="btn outline-btn" target="_blank" rel="noopener noreferrer">View Details <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                            </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h4
+                            class="text-xl font-bold text-white mb-3 group-hover:text-brand-secondary transition-colors">
+                            HR Decision Support</h4>
+                        <p class="text-gray-400 text-sm mb-6 flex-grow">
+                            A Website Based Decision Support System for Employee Recruitment using AHP Algorithm and
+                            Profile Matching method.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span
+                                class="px-3 py-1 text-xs font-medium bg-brand-secondary/10 text-brand-secondary rounded-full border border-brand-secondary/20">Laravel</span>
+                            <span
+                                class="px-3 py-1 text-xs font-medium bg-white/5 text-gray-300 rounded-full border border-white/10">AHP
+                                Algorithm</span>
                         </div>
+                        <a href="https://github.com/Ivunnn/Sistem-Rekrutmen-Pegawai-AHP-Profile-Matching"
+                            target="_blank"
+                            class="inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-brand-secondary transition-colors">
+                            <i class="fa-brands fa-github text-lg"></i> Source Code
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="glass rounded-3xl overflow-hidden reveal tilt-card flex flex-col group border border-white/5 hover:border-white/20 transition-colors"
+                    style="transition-delay: 200ms;">
+                    <div class="h-48 w-full bg-slate-800 relative overflow-hidden">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-cyan-900 to-slate-800 opacity-80 group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fa-solid fa-recycle text-5xl text-white/50"></i>
+                        </div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h4 class="text-xl font-bold text-white mb-3 group-hover:text-brand-accent transition-colors">
+                            CycleTech</h4>
+                        <p class="text-gray-400 text-sm mb-6 flex-grow">
+                            Waste management educational website providing information and resources for the community
+                            with machine learning integration.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span
+                                class="px-3 py-1 text-xs font-medium bg-brand-accent/10 text-brand-accent rounded-full border border-brand-accent/20">Laravel</span>
+                            <span
+                                class="px-3 py-1 text-xs font-medium bg-white/5 text-gray-300 rounded-full border border-white/10">Hugging
+                                Face</span>
+                            <span
+                                class="px-3 py-1 text-xs font-medium bg-white/5 text-gray-300 rounded-full border border-white/10">Tailwind</span>
+                        </div>
+                        <a href="https://github.com/Ivunnn/CycleTech" target="_blank"
+                            class="inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-brand-accent transition-colors">
+                            <i class="fa-brands fa-github text-lg"></i> Source Code
+                        </a>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="contact" class="contact reveal reveal-up">
-            <div class="container">
-                <h2 class="section-title title-reveal">Let's Collaborate</h2>
-                <p>Open for freelance opportunities and web development collaborations.</p>
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=herdiantoivan45@gmail.com" target="_blank" rel="noopener noreferrer" class="btn primary-btn glow-btn">Contact Me</a>
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-6 md:px-12 relative z-10">
+        <div
+            class="max-w-4xl mx-auto glass rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden reveal border border-white/10">
+            <!-- Inner Glow -->
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gradient-to-b from-brand-primary/20 to-transparent blur-3xl z-[-1]">
             </div>
-        </section>
-    </main>
 
-    <footer>
-        <p>&copy;2026 Ivan Herdianto</p>
+            <h2 class="text-4xl md:text-5xl font-black text-white mb-6">Let's build something <br><span
+                    class="text-gradient">amazing together.</span></h2>
+            <p class="text-gray-400 text-lg mb-10 max-w-2xl mx-auto">
+                Open for freelance opportunities, full-time roles, and web development collaborations. Feel free to
+                reach out!
+            </p>
+            <a href="mailto:herdiantoivan45@gmail.com"
+                class="inline-flex items-center justify-center gap-2 md:gap-3 px-5 py-3 md:px-8 md:py-4 rounded-full bg-white text-brand-dark font-bold text-sm md:text-lg hover:scale-105 hover:shadow-[0_0_40px_rgba(255,255,255,0.3)] transition-all duration-300 max-w-full">
+                <i class="fa-regular fa-envelope shrink-0"></i> <span class="break-all md:break-normal">Email</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/5 pt-12 pb-8 px-6 text-center relative z-10">
+        <div class="flex justify-center gap-6 mb-6">
+            <a href="https://github.com/Ivunnn" target="_blank"
+                class="w-10 h-10 rounded-full glass flex items-center justify-center text-gray-400 hover:text-white hover:-translate-y-1 hover:bg-brand-primary/20 transition-all">
+                <i class="fa-brands fa-github text-xl"></i>
+            </a>
+            <a href="mailto:herdiantoivan45@gmail.com"
+                class="w-10 h-10 rounded-full glass flex items-center justify-center text-gray-400 hover:text-white hover:-translate-y-1 hover:bg-brand-primary/20 transition-all">
+                <i class="fa-regular fa-envelope text-xl"></i>
+            </a>
+        </div>
+        <p class="text-gray-500 text-sm">
+            &copy; 2026 Ivan Herdianto.
+        </p>
     </footer>
 
-    <!-- Back to top button -->
-    <button id="backToTop" class="back-to-top" aria-label="Scroll to top">
-        <i class="fa-solid fa-arrow-up"></i>
-    </button>
-
-    <script src="script.js"></script>
+    <!-- Scripts -->
+    <!-- Lenis for Smooth Scrolling -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+    <!-- Vanilla Tilt for 3D card effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <!-- Custom Scripts -->
+    <script src="/script.js"></script>
 </body>
+
 </html>
