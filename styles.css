@@ -1,0 +1,691 @@
+/* ==========================================================================
+   Ivan Herdianto Portfolio - Deep Navy Technical Sans Theme
+   Spatial 3D Viewport + Floating Section Card
+   ========================================================================== */
+
+:root {
+  /* Color Tokens - Deep Space Navy & Cyan/Sky Accents */
+  --bg-space: #070b14;
+  --bg-paper: #0f172a;
+  --bg-paper-elevated: #15203b;
+  --text-ink: #f8fafc;
+  --text-muted: #94a3b8;
+  --border-rule: #1e293b;
+  --border-rule-subtle: #172236;
+  --accent: #38bdf8; /* Electric Sky Blue */
+  --accent-glow: rgba(56, 189, 248, 0.25);
+  --accent-contrast: #070b14;
+
+  /* Typography Stacks: Modern Technical Sans & Mono */
+  --font-sans:
+    "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  --font-mono:
+    "Geist Mono", "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono",
+    monospace;
+
+  --site-max-width: 1180px;
+
+  /* Floating section card */
+  --card-width: 350px;
+  --card-offset-right: clamp(1.5rem, 4vw, 3.5rem);
+  --card-shadow: 0 4px 14px rgba(0, 0, 0, 0.4); /* thin shadow, same as hotspot tags */
+  --card-fade: 200ms;
+}
+
+/* Zero-scroll root setup for 3D full-viewport app */
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--bg-space);
+  color: var(--text-ink);
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar for card content */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-paper);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-rule);
+  border-radius: 1px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* Selection */
+::selection {
+  background-color: var(--accent);
+  color: var(--accent-contrast);
+}
+
+/* Focus styles for keyboard accessibility */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* Typography Utility Classes: Pure Modern Sans */
+.font-display {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.font-body {
+  font-family: var(--font-sans);
+}
+
+.font-mono-meta {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.04em;
+}
+
+h1,
+h2,
+h3,
+h4,
+.text-balance {
+  text-wrap: balance;
+}
+
+p,
+.text-pretty {
+  text-wrap: pretty;
+}
+
+/* Hairline borders */
+.border-rule {
+  border-color: var(--border-rule);
+}
+
+.border-t-rule {
+  border-top: 1px solid var(--border-rule);
+}
+
+.border-b-rule {
+  border-bottom: 1px solid var(--border-rule);
+}
+
+.border-l-rule {
+  border-left: 1px solid var(--border-rule);
+}
+
+.border-r-rule {
+  border-right: 1px solid var(--border-rule);
+}
+
+/* Technical Links */
+.link-editorial {
+  position: relative;
+  color: var(--text-ink);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+  text-decoration-color: var(--border-rule);
+  transition:
+    text-decoration-color 150ms ease,
+    color 150ms ease;
+}
+
+.link-editorial:hover {
+  text-decoration-color: var(--accent);
+  color: var(--accent);
+}
+
+.link-mono {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  transition: color 150ms ease;
+}
+
+.link-mono:hover {
+  color: var(--accent);
+}
+
+/* Solid technical button */
+.btn-ink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--accent);
+  color: var(--accent-contrast);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 0.5rem 1rem;
+  border-radius: 2px;
+  border: 1px solid var(--accent);
+  min-height: 40px;
+  min-width: 40px;
+  transition:
+    opacity 150ms ease,
+    filter 150ms ease;
+  text-decoration: none;
+}
+
+.btn-ink:hover {
+  opacity: 0.9;
+  filter: brightness(1.1);
+}
+
+/* Technical Note Block */
+.editorial-note {
+  border-left: 2px solid var(--accent);
+  background-color: rgba(56, 189, 248, 0.04);
+  padding: 0.75rem 1rem;
+  margin-top: 0.875rem;
+  margin-bottom: 0.875rem;
+  border-radius: 0 2px 2px 0;
+}
+
+/* 3D Globe Hotspots & Projected Floating Tags */
+.globe-hotspot-tag {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  background-color: rgba(15, 23, 42, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--border-rule);
+  color: var(--text-ink);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+  padding: 0.35rem 0.65rem;
+  white-space: nowrap;
+  cursor: pointer;
+  z-index: 25;
+  pointer-events: auto;
+  transition:
+    border-color 150ms ease,
+    color 150ms ease,
+    transform 150ms ease,
+    box-shadow 150ms ease;
+  user-select: none;
+  border-radius: 2px;
+  display: none;
+  align-items: center;
+  gap: 0.4rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+}
+
+.globe-hotspot-tag:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translate(-50%, -50%) scale(1.05);
+  box-shadow: 0 0 16px var(--accent-glow);
+}
+
+.globe-hotspot-tag.is-active {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.globe-hotspot-tag .tag-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background-color: var(--accent);
+  box-shadow: 0 0 6px var(--accent);
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+/* Floating Section Card (muncul di sebelah kanan globe) */
+#section-card {
+  position: fixed;
+  top: 50%;
+  right: var(--card-offset-right);
+  width: var(--card-width);
+  max-width: calc(100vw - 2rem);
+  max-height: min(640px, calc(100vh - 11rem));
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: var(--bg-paper);
+  border: 1px solid var(--border-rule);
+  border-radius: 4px;
+  box-shadow: var(--card-shadow);
+  z-index: 50;
+
+  /* Closed state: invisible and not clickable. Fade in + tiny rise on open. */
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(calc(-50% + 8px));
+  transition:
+    opacity var(--card-fade) ease,
+    transform var(--card-fade) ease,
+    visibility 0s linear var(--card-fade);
+}
+
+#section-card.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(-50%);
+  transition:
+    opacity var(--card-fade) ease,
+    transform var(--card-fade) ease,
+    visibility 0s;
+}
+
+/* Re-play a quick fade when switching between sections while the card stays open */
+.card-panel:not(.hidden) {
+  animation: card-panel-in var(--card-fade) ease;
+}
+
+@keyframes card-panel-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Content scaled for a 350px card (markup keeps its original Tailwind sizes) */
+#section-card .card-panel h3 {
+  font-size: 1.625rem;
+  line-height: 1.15;
+}
+
+#section-card .card-panel h4 {
+  font-size: 1.125rem;
+  line-height: 1.3;
+}
+
+#section-card .card-panel a.font-display {
+  font-size: 1.0625rem;
+  line-height: 1.3;
+}
+
+/* Portrait (phones, tablets): card becomes a bottom sheet */
+@media (max-aspect-ratio: 1/1) {
+  #section-card {
+    top: auto;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: none;
+    max-height: 58vh;
+    max-height: min(58dvh, 34rem);
+    padding-bottom: env(safe-area-inset-bottom);
+    border-width: 1px 0 0;
+    border-radius: 14px 14px 0 0;
+    transform: translateY(24px);
+  }
+
+  #section-card.is-open {
+    transform: translateY(0);
+  }
+}
+
+#card-close-btn {
+  min-height: 40px;
+  min-width: 40px;
+  justify-content: center;
+}
+
+/* Quick Navigation Dock Buttons */
+.globe-dock-btn {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  padding: 0.4rem 0.85rem;
+  background-color: rgba(15, 23, 42, 0.9);
+  border: 1px solid var(--border-rule);
+  color: var(--text-ink);
+  border-radius: 2px;
+  transition: all 150ms ease;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.globe-dock-btn:hover,
+.globe-dock-btn.is-active {
+  border-color: var(--accent);
+  color: var(--accent);
+  background-color: rgba(56, 189, 248, 0.08);
+}
+
+/* Ambient glow behind the globe (follows where the globe sits in idle state) */
+#globe-viewport {
+  background: radial-gradient(
+    60% 60% at 66% 50%,
+    rgba(56, 189, 248, 0.08),
+    transparent 70%
+  );
+}
+
+/* Terminal boot screen */
+#boot-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background-color: var(--bg-space);
+  transition:
+    opacity 400ms ease,
+    visibility 0s linear 400ms;
+}
+
+#boot-screen.is-done {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.boot-terminal {
+  width: min(34rem, 100%);
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  line-height: 1.9;
+  color: var(--text-muted);
+}
+
+.boot-line {
+  margin: 0;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.boot-prompt,
+.boot-ok {
+  color: var(--accent);
+}
+
+.boot-ready {
+  color: var(--text-ink);
+}
+
+.boot-caret {
+  display: inline-block;
+  width: 0.55em;
+  height: 1em;
+  margin-left: 2px;
+  vertical-align: -0.15em;
+  background-color: var(--accent);
+  animation: boot-blink 900ms steps(1) infinite;
+}
+
+@keyframes boot-blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.boot-progress {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.boot-track {
+  flex: 1;
+  height: 2px;
+  background-color: var(--border-rule);
+  overflow: hidden;
+}
+
+.boot-bar {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: var(--accent);
+  box-shadow: 0 0 8px var(--accent-glow);
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.boot-percent {
+  width: 4ch;
+  text-align: right;
+  color: var(--text-ink);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Hold the hero entrance until the boot screen is gone */
+.is-booting #hero > * {
+  animation: none;
+  opacity: 0;
+}
+
+/* Hero intro */
+#hero {
+  position: absolute;
+  left: clamp(1.5rem, 5vw, 5rem);
+  top: 50%;
+  width: min(32rem, 44vw);
+  transform: translateY(-50%);
+  z-index: 15;
+  pointer-events: none; /* drags pass through to the globe */
+  transition:
+    opacity 300ms ease,
+    transform 300ms ease,
+    visibility 0s;
+}
+
+#hero a,
+#hero button {
+  pointer-events: auto;
+}
+
+#hero.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-16px, -50%);
+  transition:
+    opacity 250ms ease,
+    transform 250ms ease,
+    visibility 0s linear 250ms;
+}
+
+/* One orchestrated entrance on page load */
+#hero > * {
+  animation: hero-in 700ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+#hero > *:nth-child(2) {
+  animation-delay: 80ms;
+}
+#hero > *:nth-child(3) {
+  animation-delay: 160ms;
+}
+#hero > *:nth-child(4) {
+  animation-delay: 240ms;
+}
+#hero > *:nth-child(5) {
+  animation-delay: 320ms;
+}
+#hero > *:nth-child(6) {
+  animation-delay: 400ms;
+}
+
+@keyframes hero-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-kicker {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin: 0 0 1rem;
+}
+
+.hero-name {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: clamp(2.5rem, 5.2vw, 4.5rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  margin: 0 0 0.75rem;
+  text-wrap: balance;
+}
+
+.hero-role {
+  font-size: clamp(1.125rem, 1.8vw, 1.5rem);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--accent);
+  margin: 0 0 1rem;
+}
+
+.hero-pitch {
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.65;
+  max-width: 28rem;
+  margin: 0 0 1.5rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1rem;
+}
+
+.hero-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 1.75rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hero-chip {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  border: 1px solid var(--border-rule);
+  background-color: rgba(15, 23, 42, 0.6);
+  padding: 0.25rem 0.55rem;
+  border-radius: 2px;
+}
+
+@media (max-aspect-ratio: 1/1) {
+  #globe-viewport {
+    background: radial-gradient(
+      70% 50% at 50% 62%,
+      rgba(56, 189, 248, 0.08),
+      transparent 70%
+    );
+  }
+  #hero {
+    top: 4.75rem;
+    width: calc(100vw - 3rem);
+    transform: none;
+  }
+  #hero.is-hidden {
+    transform: translateY(-12px);
+  }
+  .hero-kicker {
+    margin-bottom: 0.5rem;
+    font-size: 0.8125rem;
+  }
+  .hero-pitch {
+    font-size: 0.875rem;
+    line-height: 1.55;
+    margin-bottom: 1rem;
+  }
+  .hero-stack {
+    display: none;
+  }
+}
+
+/* Footer: just the copyright, aligned with the hero's left edge. No bar, never blocks the globe. */
+#hud-footer {
+  padding: 0.9rem clamp(1.5rem, 5vw, 5rem)
+    calc(0.9rem + env(safe-area-inset-bottom));
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+.footer-copy,
+.footer-hint {
+  margin: 0;
+}
+
+.footer-hint {
+  display: none; /* touch hint is only shown in portrait */
+}
+
+/* Portrait: centered footer with a small touch hint; header keeps only the essentials */
+@media (max-aspect-ratio: 1/1) {
+  #hud-footer {
+    padding-inline: 1rem;
+    text-align: center;
+  }
+  .footer-hint {
+    display: block;
+    margin-bottom: 0.25rem;
+    opacity: 0.8;
+  }
+  header .btn-ink {
+    display: none; /* the hero already has Download CV */
+  }
+}
+
+/* Short landscape screens (phones on their side): keep the hero compact */
+@media (max-height: 520px) and (min-aspect-ratio: 1/1) {
+  .hero-kicker,
+  .hero-pitch,
+  .hero-stack {
+    display: none;
+  }
+}
+
+/* Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  #section-card,
+  #section-card.is-open {
+    transition: none !important;
+  }
+  .card-panel:not(.hidden),
+  #hero > * {
+    animation: none !important;
+  }
+  #hero,
+  #hero.is-hidden {
+    transition: none !important;
+  }
+  .boot-caret {
+    animation: none !important;
+  }
+  .globe-hotspot-tag {
+    transition: none !important;
+  }
+}

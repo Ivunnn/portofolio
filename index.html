@@ -3,707 +3,616 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ivan Herdianto | Portfolio Web</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Ivan Herdianto | Full-Stack Web Developer, Laravel & React</title>
 
-    <!-- Meta Tags -->
-    <meta name="title" content="Ivan Herdianto | Web Developer">
+    <!-- SEO -->
     <meta name="description"
-        content="Portofolio resmi Ivan Herdianto, saya adalah pengembang web dengan spesialisasi pada ekosistem Laravel, React, Next.js.">
+        content="Full-stack web developer from Mojokerto, Indonesia. Laravel, React, Vue and GIS projects built end-to-end. See Ivan Herdianto&#39;s portfolio and download his CV.">
     <meta name="keywords"
-        content="Ivan Herdianto, Web Developer, Fullstack Developer, TALL Stack, Laravel, React, Next.js, GIS, Pemetaan Bansos, UI/UX Design, Web Developer Mojokerto, Web Developer Indonesia, Web Developer Surabaya, Web Developer Jawa Timur">
+        content="Ivan Herdianto, Full-Stack Web Developer, Laravel, React, Vue, Inertia.js, GIS, Web Developer Mojokerto, Web Developer Jawa Timur, Web Developer Indonesia, Portfolio">
     <meta name="author" content="Ivan Herdianto">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="theme-color" content="#070b14">
+    <meta name="color-scheme" content="dark">
     <link rel="canonical" href="https://ivanherdianto-portofolio.vercel.app/">
 
+    <!-- Open Graph -->
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Ivan Herdianto Portfolio">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="id_ID">
     <meta property="og:url" content="https://ivanherdianto-portofolio.vercel.app/">
-    <meta property="og:title" content="Ivan Herdianto | Web Developer">
+    <meta property="og:title" content="Ivan Herdianto | Full-Stack Web Developer">
     <meta property="og:description"
-        content="Portofolio resmi Ivan Herdianto, seorang pengembang web modern yang berfokus pada ekosistem TALL stack, React, Next.js, dan integrasi Sistem Informasi Geografis (SIG).">
+        content="Full-stack web developer from Mojokerto, Indonesia. Laravel, React, Vue and GIS projects built end-to-end. See Ivan Herdianto&#39;s portfolio and download his CV.">
     <meta property="og:image" content="https://ivanherdianto-portofolio.vercel.app/assets/og-image.jpg">
+    <meta property="og:image:alt"
+        content="Ivan Herdianto portfolio: an interactive globe with sections for skills, experience, projects and contact">
 
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://ivanherdianto-portofolio.vercel.app/">
-    <meta property="twitter:title" content="Ivan Herdianto | Web Developer">
-    <meta property="twitter:description"
-        content="Portofolio resmi Ivan Herdianto, seorang pengembang web modern yang berfokus pada ekosistem TALL stack, React, Next.js, dan integrasi Sistem Informasi Geografis (SIG).">
-    <meta property="twitter:image" content="https://ivanherdianto-portofolio.vercel.app/assets/twitter-image.jpg">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ivan Herdianto | Full-Stack Web Developer">
+    <meta name="twitter:description"
+        content="Full-stack web developer from Mojokerto, Indonesia. Laravel, React, Vue and GIS projects built end-to-end. See Ivan Herdianto&#39;s portfolio and download his CV.">
+    <meta name="twitter:image" content="https://ivanherdianto-portofolio.vercel.app/assets/twitter-image.jpg">
+    <meta name="twitter:image:alt"
+        content="Ivan Herdianto portfolio: an interactive globe with sections for skills, experience, projects and contact">
 
-    <link rel="icon" type="image/x-icon" href="assets/favicon.svg">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.svg">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon.svg">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon.svg">
+    <!-- Structured data (Person + WebSite) -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://ivanherdianto-portofolio.vercel.app/#website",
+      "url": "https://ivanherdianto-portofolio.vercel.app/",
+      "name": "Ivan Herdianto Portfolio",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://ivanherdianto-portofolio.vercel.app/#person",
+      "name": "Ivan Herdianto",
+      "url": "https://ivanherdianto-portofolio.vercel.app/",
+      "jobTitle": "Full-Stack Web Developer",
+      "description": "Full-stack web developer and Informatics graduate from Mojokerto, Indonesia, building Laravel, React, Vue and GIS applications end-to-end.",
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "UPN \"Veteran\" Jawa Timur"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Mojokerto",
+        "addressRegion": "East Java",
+        "addressCountry": "ID"
+      },
+      "knowsAbout": [
+        "Laravel",
+        "Livewire",
+        "React",
+        "Vue.js",
+        "Inertia.js",
+        "Tailwind CSS",
+        "Geographic Information Systems",
+        "Leaflet.js",
+        "Machine Learning"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/in/ivan-herdianto/",
+        "https://github.com/Ivunnn"
+      ]
+    }
+  ]
+}
+    </script>
 
-    <!-- Google Fonts: Inter -->
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="apple-touch-icon" href="assets/favicon.svg">
+
+    <!-- Google Fonts: Instrument Serif, Geist, Geist Mono -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600&family=Geist:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap"
         rel="stylesheet">
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <!-- Three.js (via CDN) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
 
-    <!-- Tailwind CSS -->
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <noscript>
+        <style>
+            #boot-screen {
+                display: none;
+            }
+
+            .is-booting #hero>* {
+                opacity: 1;
+                animation: none;
+            }
+        </style>
+    </noscript>
+
+    <!-- Tailwind CSS (via CDN) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
-            darkMode: 'class',
+            darkMode: 'media',
             theme: {
                 extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
                     colors: {
-                        brand: {
-                            dark: '#0b1120',
-                            card: '#1e293b',
-                            primary: '#3b82f6', // Blue
-                            secondary: '#8b5cf6', // Purple
-                            accent: '#06b6d4' // Cyan
-                        }
+                        paper: 'var(--bg-paper)',
+                        ink: 'var(--text-ink)',
+                        muted: 'var(--text-muted)',
+                        rule: 'var(--border-rule)',
+                        accent: 'var(--accent)',
+                        'accent-contrast': 'var(--accent-contrast)',
                     },
-                    animation: {
-                        'blob': 'blob 7s infinite',
-                        'float': 'float 6s ease-in-out infinite',
-                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    fontFamily: {
+                        display: ['var(--font-sans)', 'sans-serif'],
+                        sans: ['var(--font-sans)', 'sans-serif'],
+                        mono: ['var(--font-mono)', 'monospace'],
                     },
-                    keyframes: {
-                        blob: {
-                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
-                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
-                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
-                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
-                        },
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-20px)' },
-                        }
-                    }
                 }
             }
         }
     </script>
-
-    <!-- Custom CSS -->
-    <style>
-        body {
-            background-color: #0b1120;
-            color: #f8fafc;
-            overflow-x: hidden;
-        }
-
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #0b1120;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #3b82f6;
-            border-radius: 4px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: #8b5cf6;
-        }
-
-        /* Background Grid */
-        .bg-grid {
-            background-size: 50px 50px;
-            background-image:
-                linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-            mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
-            -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
-        }
-
-        /* Glassmorphism utilities */
-        .glass {
-            background: rgba(30, 41, 59, 0.4);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        /* Reveal Animations */
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
-        }
-
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Text Gradient */
-        .text-gradient {
-            background: linear-gradient(to right, #3b82f6, #8b5cf6, #06b6d4);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-size: 200% auto;
-            animation: textShine 4s linear infinite;
-        }
-
-        @keyframes textShine {
-            to {
-                background-position: 200% center;
-            }
-        }
-
-        /* Typing cursor */
-        .typing-cursor::after {
-            content: '|';
-            animation: blink 1s step-end infinite;
-            color: #3b82f6;
-        }
-
-        @keyframes blink {
-            50% {
-                opacity: 0;
-            }
-        }
-
-        /* ===== Preloader ===== */
-        body.is-loading {
-            overflow: hidden;
-        }
-
-        #preloader {
-            position: fixed;
-            inset: 0;
-            z-index: 100;
-            background: #0b1120;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 2.5rem;
-            transition: opacity 0.9s ease 0.35s;
-        }
-
-        #preloader.leaving {
-            opacity: 0;
-            pointer-events: none;
-        }
-
-        /* Wrapper: mengatur zoom saat keluar */
-        .pre-logo-wrap {
-            position: relative;
-            width: 96px;
-            height: 96px;
-            transition: transform 1.5s cubic-bezier(0.76, 0, 0.24, 1);
-            will-change: transform;
-        }
-
-        #preloader.leaving .pre-logo-wrap {
-            transform: scale(700);
-        }
-
-        /* Logo: animasi masuk */
-        .pre-logo {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            opacity: 0;
-            transform: scale(0.5);
-            animation: logoIn 5s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
-        }
-
-        /* Glow di belakang logo */
-        .pre-glow {
-            position: absolute;
-            inset: -40%;
-            background: radial-gradient(circle, rgba(59, 130, 246, 0.45), rgba(139, 92, 246, 0.2) 50%, transparent 70%);
-            filter: blur(20px);
-            opacity: 0;
-            animation: glowIn 1.2s ease 0.3s forwards, glowPulse 2.5s ease-in-out 1.5s infinite;
-            transition: opacity 0.4s ease;
-        }
-
-        #preloader.leaving .pre-glow {
-            opacity: 0 !important;
-            animation: none;
-        }
-
-        /* Progress bar tipis */
-        .pre-bar {
-            width: 160px;
-            height: 2px;
-            background: rgba(255, 255, 255, 0.08);
-            border-radius: 2px;
-            overflow: hidden;
-            opacity: 0;
-            animation: preFade 0.8s ease 0.6s forwards;
-            transition: opacity 0.3s ease;
-        }
-
-        #preloader.leaving .pre-bar {
-            opacity: 0 !important;
-            animation: none;
-        }
-
-        #pre-bar-fill {
-            height: 100%;
-            background: linear-gradient(to right, #3b82f6, #8b5cf6, #06b6d4);
-            transform: scaleX(0);
-            transform-origin: left;
-        }
-
-        @keyframes logoIn {
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-
-        @keyframes glowIn {
-            to {
-                opacity: 1;
-            }
-        }
-
-        @keyframes glowPulse {
-            50% {
-                transform: scale(1.15);
-                opacity: 0.7;
-            }
-        }
-
-        @keyframes preFade {
-            to {
-                opacity: 1;
-            }
-        }
-    </style>
 </head>
 
-<body class="is-loading antialiased selection:bg-brand-secondary selection:text-white relative">
+<body
+    class="w-screen h-screen overflow-hidden relative is-booting bg-[#070B14] text-ink selection:bg-accent selection:text-accent-contrast">
 
-    <!-- Preloader -->
-    <div id="preloader" aria-hidden="true">
-        <div class="pre-logo-wrap">
-            <div class="pre-glow"></div>
-            <img src="/assets/favicon.svg" alt="" class="pre-logo">
+    <!-- 0. Terminal boot screen (fixed ~2.7s, independent of network; click or any key skips) -->
+    <div id="boot-screen" role="status">
+        <div class="boot-terminal" aria-hidden="true">
+            <div id="boot-output">
+                <p class="boot-line"><span class="boot-prompt">ivan@portfolio:~$</span> <span id="boot-cmd"></span><span
+                        id="boot-caret" class="boot-caret"></span></p>
+            </div>
+            <div class="boot-progress">
+                <span class="boot-track"><span id="boot-bar" class="boot-bar"></span></span>
+                <span id="boot-percent" class="boot-percent">0%</span>
+            </div>
         </div>
-        <div class="pre-bar">
-            <div id="pre-bar-fill"></div>
-        </div>
+        <span class="sr-only">Loading portfolio</span>
     </div>
 
-    <!-- Ambient Background Blobs -->
-    <div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
-        <div
-            class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-brand-primary/20 rounded-full mix-blend-screen filter blur-[100px] animate-blob">
-        </div>
-        <div
-            class="absolute top-[20%] right-[-10%] w-96 h-96 bg-brand-secondary/20 rounded-full mix-blend-screen filter blur-[100px] animate-blob animation-delay-2000">
-        </div>
-        <div
-            class="absolute bottom-[-20%] left-[20%] w-[30rem] h-[30rem] bg-brand-accent/10 rounded-full mix-blend-screen filter blur-[120px] animate-blob animation-delay-4000">
-        </div>
-        <div class="absolute inset-0 bg-grid pointer-events-none"></div>
+    <!-- 1. Fullscreen 3D Space Canvas Viewport -->
+    <div id="globe-viewport" role="main"
+        class="absolute inset-0 w-full h-full cursor-grab active:cursor-grabbing z-0 touch-none">
+        <div id="globe-canvas-mount" class="w-full h-full"></div>
+
+        <!-- 3D Projected Hotspot Tags (Calculated in real-time by script.js) -->
+        <button id="tag-home" type="button" class="globe-hotspot-tag" data-section="home"
+            aria-label="Open About Base Information">
+            <span class="w-1.5 h-1.5 rounded-full bg-ink inline-block"></span>
+            <span>Overview</span>
+        </button>
+
+        <button id="tag-skills" type="button" class="globe-hotspot-tag" data-section="skills"
+            aria-label="Open Skills Section Card">
+            <span class="tag-dot"></span>
+            <span class="font-medium">01 / Skills</span>
+            <span aria-hidden="true">&rarr;</span>
+        </button>
+
+        <button id="tag-experience" type="button" class="globe-hotspot-tag" data-section="experience"
+            aria-label="Open Experience Section Card">
+            <span class="tag-dot"></span>
+            <span class="font-medium">02 / Experience</span>
+            <span aria-hidden="true">&rarr;</span>
+        </button>
+
+        <button id="tag-projects" type="button" class="globe-hotspot-tag" data-section="projects"
+            aria-label="Open Projects Section Card">
+            <span class="tag-dot"></span>
+            <span class="font-medium">03 / Projects</span>
+            <span aria-hidden="true">&rarr;</span>
+        </button>
+
+        <button id="tag-contact" type="button" class="globe-hotspot-tag" data-section="contact"
+            aria-label="Open Contact Section Card">
+            <span class="tag-dot"></span>
+            <span class="font-medium">04 / Contact</span>
+            <span aria-hidden="true">&rarr;</span>
+        </button>
     </div>
 
-    <!-- Scroll Progress Bar -->
-    <div class="fixed top-0 left-0 h-1 bg-gradient-to-r from-brand-primary to-brand-secondary z-50 transition-all duration-150 ease-out"
-        id="scroll-progress" style="width: 0%"></div>
+    <!-- 2. Top HUD Header -->
+    <header
+        class="absolute top-0 left-0 w-full z-20 px-6 py-4 flex items-center justify-between border-b border-rule/30 bg-paper/80 backdrop-blur-md">
+        <div class="flex flex-wrap items-center gap-x-4 gap-y-1 font-mono text-xs">
+            <button id="header-brand-btn" type="button"
+                class="font-semibold tracking-widest uppercase text-ink hover:text-accent transition-colors">
+                Ivan Herdianto
+            </button>
+            <span class="text-rule/60 hidden sm:inline">/</span>
+            <span class="inline-flex items-center gap-1.5 text-muted">
+                <span class="w-2 h-2 rounded-full bg-accent inline-block" aria-hidden="true"></span>
+                Available for work
+            </span>
+            <span class="text-rule/60 hidden md:inline">/</span>
+            <span class="text-muted hidden md:inline">7.47&deg; S, 112.43&deg; E</span>
+        </div>
 
-    <!-- Navbar -->
-    <nav id="navbar" class="fixed w-full z-40 transition-all duration-300 py-6 px-6 md:px-12">
-        <div class="max-w-7xl mx-auto flex justify-between items-center glass rounded-2xl px-6 py-3">
-            <a href="#home" class="text-xl font-bold tracking-tighter flex items-center gap-2 group">
-                <div
-                    class="w-8 h-8 rounded-lg bg-gradient-to-br flex items-center justify-center text-white font-black group-hover:rotate-12 transition-transform">
-                    <img src="/assets/favicon.svg" alt="Logo" class="w-5 h-5">
-                </div>
+    </header>
+
+    <!-- 2b. Hero intro (first thing a recruiter reads; hides while a section card is open) -->
+    <section id="hero" aria-label="Introduction">
+        <p class="hero-kicker">Bachelor of Informatics</p>
+        <h1 class="hero-name">Ivan Herdianto</h1>
+        <p class="hero-role">Full-stack Web Developer</p>
+        <p class="hero-pitch">
+            I build complete products, from database design to the interface people actually use.
+            Laravel at the core, React or Vue on the front.
+        </p>
+        <div class="hero-actions">
+            <a href="/assets/CV_Ivan_Herdianto_2026.pdf" download="CV_Ivan_Herdianto_2026.pdf" class="btn-ink">
+                Download CV <span aria-hidden="true">&darr;</span>
             </a>
+            <button type="button" class="globe-dock-btn" data-section="projects">View projects</button>
+            <a href="mailto:herdiantoivan45@gmail.com" class="link-editorial font-mono text-xs">Email me</a>
+        </div>
+        <ul class="hero-stack" aria-label="Main technologies">
+            <li class="hero-chip">Laravel</li>
+            <li class="hero-chip">Livewire</li>
+            <li class="hero-chip">React</li>
+            <li class="hero-chip">Vue</li>
+            <li class="hero-chip">Inertia.js</li>
+            <li class="hero-chip">Tailwind</li>
+            <li class="hero-chip">Leaflet GIS</li>
+        </ul>
+    </section>
 
-            <!-- Desktop Menu -->
-            <ul class="hidden md:flex space-x-8 items-center">
-                <li><a href="#home"
-                        class="text-sm font-medium text-gray-300 hover:text-white transition-colors relative group">Home
-                        <span
-                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-primary transition-all group-hover:w-full"></span>
-                    </a></li>
-                <li><a href="#about"
-                        class="text-sm font-medium text-gray-300 hover:text-white transition-colors relative group">About
-                        <span
-                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-primary transition-all group-hover:w-full"></span>
-                    </a></li>
-                <li><a href="#projects"
-                        class="text-sm font-medium text-gray-300 hover:text-white transition-colors relative group">Projects
-                        <span
-                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-primary transition-all group-hover:w-full"></span>
-                    </a></li>
-                <li><a href="#contact"
-                        class="px-5 py-2 text-sm font-semibold rounded-full bg-white/5 border border-white/10 hover:bg-brand-primary hover:border-brand-primary transition-all">Contact
-                        Me</a></li>
-            </ul>
+    <!-- 3. Footer: copyright only (sections open from the globe nodes or the hero button) -->
+    <footer id="hud-footer" class="absolute bottom-0 left-0 w-full z-20">
+        <p class="footer-hint">Tap a node to explore, pinch to zoom</p>
+        <p class="footer-copy">&copy; Ivan Herdianto 2026</p>
+    </footer>
 
-            <!-- Mobile Hamburger -->
-            <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white text-2xl focus:outline-none">
-                <i class="fa-solid fa-bars"></i>
+    <!-- 4. Floating Section Card (opens next to the globe; closes on outside click, Esc, or the close button) -->
+    <aside id="section-card" role="dialog" aria-modal="false" aria-label="Section Details Card" aria-hidden="true">
+        <!-- Card Header with Section Title & Close Button -->
+        <div class="px-5 py-3.5 border-b border-rule flex items-center justify-between gap-3 bg-paper shrink-0">
+            <div class="min-w-0">
+                <p id="card-eyebrow" class="font-mono text-xs uppercase tracking-widest text-muted mb-0.5">Section</p>
+                <h2 id="card-title" class="font-display text-xl text-ink">Details</h2>
+            </div>
+            <button id="card-close-btn" type="button"
+                class="px-2.5 py-1.5 border border-rule font-mono text-xs text-muted hover:border-accent hover:text-accent transition-colors flex items-center gap-1.5 shrink-0"
+                aria-label="Close information card">
+                <span aria-hidden="true">✕</span>
+                <span>Close</span>
             </button>
         </div>
 
-        <!-- Mobile Menu Dropdown -->
-        <div id="mobile-menu"
-            class="absolute top-24 left-6 right-6 glass rounded-2xl flex flex-col items-center py-6 space-y-4 opacity-0 pointer-events-none transform -translate-y-4 transition-all duration-300 md:hidden">
-            <a href="#home" class="text-lg font-medium text-gray-300 mobile-link">Home</a>
-            <a href="#about" class="text-lg font-medium text-gray-300 mobile-link">About</a>
-            <a href="#projects" class="text-lg font-medium text-gray-300 mobile-link">Projects</a>
-            <a href="#contact"
-                class="px-6 py-2 mt-2 text-md font-semibold rounded-full bg-brand-primary text-white mobile-link">Contact
-                Me</a>
-        </div>
-    </nav>
+        <!-- Card Scrollable Content Area -->
+        <div id="card-body" class="flex-1 overflow-y-auto px-5 py-5 bg-paper">
 
-    <!-- Hero Section -->
-    <section id="home"
-        class="min-h-screen flex items-center justify-center pt-36 pb-12 md:pt-20 md:pb-0 px-6 md:px-12 relative">
-        <div class="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-
-            <!-- Hero Text -->
-            <div class="order-2 md:order-1 flex flex-col space-y-6 reveal">
-                <div
-                    class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-brand-primary/30 bg-brand-primary/10 w-max">
-                    <span class="relative flex h-2.5 w-2.5">
-                        <span
-                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-primary opacity-75"></span>
-                        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-brand-primary"></span>
-                    </span>
-                    <span class="text-xs font-medium text-brand-primary uppercase tracking-wider">Available for
-                        work</span>
-                </div>
-
-                <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-white leading-tight">
-                    Hello, I am <br>
-                    <span class="text-gradient">Ivan Herdianto</span>
-                </h1>
-
-                <h2 class="text-2xl md:text-2xl font-medium text-gray-400">
-                    I am <span id="typewriter" class="text-white typing-cursor"></span>
-                </h2>
-
-                <p class="text-gray-400 text-lg md:text-xl max-w-lg leading-relaxed">
-                    Informatics Fresh Graduate from UPN "Veteran" Jawa Timur. Focused on building modern web
-                    applications. Ready to apply technical knowledge to contribute to software development projects, and
-                    highly interested in developing skills through practical industry experience.
-                </p>
-
-                <div class="flex flex-wrap gap-4 pt-4">
-                    <a href="/assets/CV_Ivan Herdianto_2026.pdf" target="_blank"
-                        class="px-8 py-3 rounded-xl glass text-white font-semibold hover:-translate-y-1 hover:bg-white/10 transition-all flex items-center gap-2">
-                        Download CV <i class="fa-solid fa-arrow-down text-sm"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/ivan-herdianto/" target="_blank"
-                        class="px-8 py-3 bg-brand-primary rounded-xl glass text-white font-semibold hover:-translate-y-1 hover:bg-white/10 transition-all flex items-center gap-2">
-                        <i class="fa-brands fa-linkedin text-xl"></i> LinkedIn
-                    </a>
-                    <a href="https://www.github.com/Ivunnn" target="_blank"
-                        class="px-8 py-3 rounded-xl glass text-white font-semibold hover:-translate-y-1 hover:bg-white/10 transition-all flex items-center gap-2">
-                        <i class="fa-brands fa-github text-xl"></i> GitHub
-                    </a>
-                </div>
-            </div>
-
-            <!-- Hero Image -->
-            <div class="order-1 md:order-2 flex justify-center md:justify-end reveal">
-                <div class="relative w-72 h-72 md:w-96 md:h-96 animate-float">
-                    <!-- Glowing backplate -->
-                    <div
-                        class="absolute inset-0 bg-gradient-to-tr from-brand-primary to-brand-secondary rounded-full blur-2xl opacity-40 animate-pulse-slow">
-                    </div>
-                    <!-- Image container -->
-                    <div class="absolute inset-0 p-2 rounded-full glass border border-white/20">
-                        <img src="/assets/anjay.jpg" alt="Ivan Herdianto"
-                            class="w-full h-full object-cover rounded-full border-4 border-transparent bg-clip-border"
-                            onerror="this.src='/assets/anjay.jpg';">
-                    </div>
-
-                    <!-- Floating Tech Badges -->
-                    <div class="absolute -top-4 -left-4 glass px-4 py-2 rounded-xl flex items-center gap-2 animate-float"
-                        style="animation-delay: -2s;">
-                        <i class="fa-brands fa-laravel text-[#FF2D20] text-xl"></i>
-                        <span class="text-sm font-semibold">Laravel</span>
-                    </div>
-                    <div class="absolute bottom-10 -right-8 glass px-4 py-2 rounded-xl flex items-center gap-2 animate-float"
-                        style="animation-delay: -4s;">
-                        <i class="devicon-nextjs-plain text-white text-xl"></i>
-                        <span class="text-sm font-semibold">Next.js</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills / About Section -->
-    <section id="about" class="py-24 px-6 md:px-12 relative z-10">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16 reveal">
-                <h2 class="text-sm font-bold text-brand-primary uppercase tracking-widest mb-2">My Expertise</h2>
-                <h3 class="text-4xl font-extrabold text-white">Core Skills</h3>
-                <div class="w-16 h-1 bg-brand-primary mx-auto mt-6 rounded-full"></div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Skill Card 1 -->
-                <div
-                    class="glass p-8 rounded-3xl reveal tilt-card cursor-pointer border border-white/5 hover:border-brand-primary/50 transition-colors group">
-                    <div
-                        class="w-14 h-14 rounded-2xl bg-brand-primary/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                        <i
-                            class="fa-brands fa-laravel text-3xl text-brand-primary group-hover:text-white transition-colors"></i>
-                    </div>
-                    <h4 class="text-2xl font-bold text-white mb-3">TALL Stack</h4>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        Experienced in building solid backends and dynamic frontend systems using Tailwind, Alpine.js,
-                        Laravel, and Livewire.
-                    </p>
-                </div>
-
-                <!-- Skill Card 2 -->
-                <div class="glass p-8 rounded-3xl reveal tilt-card cursor-pointer border border-white/5 hover:border-brand-secondary/50 transition-colors group"
-                    style="transition-delay: 100ms;">
-                    <div
-                        class="w-14 h-14 rounded-2xl bg-brand-secondary/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                        <i
-                            class="fa-brands fa-react text-3xl text-brand-secondary group-hover:text-white transition-colors"></i>
-                    </div>
-                    <h4 class="text-2xl font-bold text-white mb-3">RILT Stack</h4>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        Building highly interactive, SPA-like web applications by combining the reactivity of React.js
-                        and Tailwind CSS with a powerful Laravel backend via Inertia.js.
-                    </p>
-                </div>
-
-                <!-- Skill Card 3 -->
-                <div class="glass p-8 rounded-3xl reveal tilt-card cursor-pointer border border-white/5 hover:border-brand-accent/50 transition-colors group"
-                    style="transition-delay: 200ms;">
-                    <div
-                        class="w-14 h-14 rounded-2xl bg-brand-accent/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                        <i
-                            class="fa-brands fa-vuejs text-3xl text-brand-accent group-hover:text-white transition-colors"></i>
-                    </div>
-                    <h4 class="text-2xl font-bold text-white mb-3">VILT Stack</h4>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        Developing fast, reactive single-page applications using Vue.js and Tailwind CSS, seamlessly
-                        integrated with Laravel via Inertia.js to build dynamic dashboards.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="py-24 px-6 md:px-12 relative z-10">
-        <div class="max-w-7xl mx-auto">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-16 reveal">
+            <!-- Panel 0: Base / Home Overview -->
+            <div id="panel-home" class="card-panel hidden space-y-8">
                 <div>
-                    <h2 class="text-sm font-bold text-brand-primary uppercase tracking-widest mb-2">Portfolio</h2>
-                    <h3 class="text-4xl font-extrabold text-white">Recent Projects</h3>
+                    <h3 class="font-display text-4xl sm:text-5xl text-ink leading-tight mb-4">Ivan Herdianto</h3>
+                    <div class="font-mono text-xs text-muted flex flex-wrap items-center gap-x-3 gap-y-1 mb-6">
+                        <span class="text-ink font-medium">Full-Stack Web Developer</span>
+                        <span class="text-rule">/</span>
+                        <span>UPN "Veteran" Jawa Timur</span>
+                        <span class="text-rule">/</span>
+                        <span>7.47&deg; S, 112.43&deg; E</span>
+                    </div>
+                    <p class="font-sans text-muted text-base leading-relaxed text-pretty">
+                        Informatics fresh graduate from UPN “Veteran” Jawa Timur (GPA 3.89/4.00) specializing in
+                        full-stack web development using Laravel Framework. Built and delivered web-based applications
+                        with role-based access, SQL databases (MySQL, PostgreSQL), and map-based features (Leaflet.js),
+                        including a recruitment decision support system developed in Agile sprints during an internship.
+                        Also applied Python and machine learning (SVR, scikit-learn) in my thesis, deployed as a
+                        Streamlit web app.
+                    </p>
                 </div>
-                <a href="https://github.com/Ivunnn" target="_blank"
-                    class="mt-6 md:mt-0 text-brand-primary hover:text-white transition-colors flex items-center gap-2 font-medium">
-                    View all on GitHub <i class="fa-solid fa-arrow-right"></i>
-                </a>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Project 1 -->
-                <div
-                    class="glass rounded-3xl overflow-hidden reveal tilt-card flex flex-col group border border-white/5 hover:border-white/20 transition-colors">
-                    <div class="h-48 w-full bg-slate-800 relative overflow-hidden">
-                        <!-- Mockup Image / Gradient Placeholder -->
-                        <div
-                            class="absolute inset-0 bg-gradient-to-br from-blue-900 to-slate-800 opacity-80 group-hover:scale-105 transition-transform duration-500">
-                        </div>
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <i class="fa-solid fa-map-location-dot text-5xl text-white/50"></i>
-                        </div>
-                    </div>
-                    <div class="p-8 flex flex-col flex-grow">
-                        <h4 class="text-xl font-bold text-white mb-3 group-hover:text-brand-primary transition-colors">
-                            SIMPELKESOS</h4>
-                        <p class="text-gray-400 text-sm mb-6 flex-grow">
-                            A Geographic Information System (GIS) application to map and analyze the distribution of
-                            social assistance recipients in Mojokerto Regency.
+            <!-- Panel 1: Core Skills & Profile -->
+            <div id="panel-skills" class="card-panel hidden space-y-8">
+                <!-- Formal Portrait Photo & Bio -->
+                <div class="flex flex-col sm:flex-row gap-6 items-start pb-8 border-b border-rule">
+                    <!-- <div class="w-40 sm:w-44 aspect-[4/5] border border-rule shrink-0 overflow-hidden bg-paper">
+                        <img src="/assets/anjay.jpg" alt="Portrait photo of Ivan Herdianto" class="w-full h-full object-cover grayscale contrast-105" loading="lazy">
+                    </div> -->
+                    <div>
+                        <p class="font-sans text-muted text-sm leading-relaxed text-pretty">
+                            Specializing in Laravel backend architectures, reactive SPAs via Inertia.js (React/Vue), and
+                            Geospatial Information Systems.
                         </p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span
-                                class="px-3 py-1 text-xs font-medium bg-brand-primary/10 text-brand-primary rounded-full border border-brand-primary/20">Laravel</span>
-                            <span
-                                class="px-3 py-1 text-xs font-medium bg-white/5 text-gray-300 rounded-full border border-white/10">Leaflet.js</span>
-                            <span
-                                class="px-3 py-1 text-xs font-medium bg-white/5 text-gray-300 rounded-full border border-white/10">AdminLTE</span>
-                        </div>
-                        <a href="https://github.com/Ivunnn/SIMPELKESOS" target="_blank"
-                            class="inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-brand-primary transition-colors">
-                            <i class="fa-brands fa-github text-lg"></i> Source Code
-                        </a>
                     </div>
                 </div>
 
-                <!-- Project 2 -->
-                <div class="glass rounded-3xl overflow-hidden reveal tilt-card flex flex-col group border border-white/5 hover:border-white/20 transition-colors"
-                    style="transition-delay: 100ms;">
-                    <div class="h-48 w-full bg-slate-800 relative overflow-hidden">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-br from-purple-900 to-slate-800 opacity-80 group-hover:scale-105 transition-transform duration-500">
+                <!-- Indexed List of Skills -->
+                <div class="divide-y divide-rule border-b border-rule">
+                    <!-- Skill 1 -->
+                    <div class="py-6">
+                        <div class="flex items-center gap-3 font-mono text-xs text-muted mb-2">
+                            <span>01</span>
+                            <span class="text-rule">/</span>
+                            <span class="uppercase tracking-wider">Ecosystem</span>
                         </div>
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <i class="fa-solid fa-users-gear text-5xl text-white/50"></i>
+                        <h4 class="font-display text-2xl text-ink mb-2">TALL Stack</h4>
+                        <p class="font-sans text-muted text-sm leading-relaxed text-pretty">
+                            Experienced in building solid backends and dynamic frontend systems using Tailwind,
+                            Alpine.js, Laravel, and Livewire.
+                        </p>
+                    </div>
+
+                    <!-- Skill 2 -->
+                    <div class="py-6">
+                        <div class="flex items-center gap-3 font-mono text-xs text-muted mb-2">
+                            <span>02</span>
+                            <span class="text-rule">/</span>
+                            <span class="uppercase tracking-wider">Ecosystem</span>
+                        </div>
+                        <h4 class="font-display text-2xl text-ink mb-2">RILT Stack</h4>
+                        <p class="font-sans text-muted text-sm leading-relaxed text-pretty">
+                            Building highly interactive, SPA-like web applications by combining the reactivity of
+                            React.js and Tailwind CSS with a powerful Laravel backend via Inertia.js.
+                        </p>
+                    </div>
+
+                    <!-- Skill 3 -->
+                    <div class="py-6">
+                        <div class="flex items-center gap-3 font-mono text-xs text-muted mb-2">
+                            <span>03</span>
+                            <span class="text-rule">/</span>
+                            <span class="uppercase tracking-wider">Ecosystem</span>
+                        </div>
+                        <h4 class="font-display text-2xl text-ink mb-2">VILT Stack</h4>
+                        <p class="font-sans text-muted text-sm leading-relaxed text-pretty">
+                            Developing fast, reactive single-page applications using Vue.js and Tailwind CSS, seamlessly
+                            integrated with Laravel via Inertia.js to build dynamic dashboards.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel 2: Experience Ledger -->
+            <div id="panel-experience" class="card-panel hidden space-y-6">
+                <div class="divide-y divide-rule border-t border-b border-rule">
+
+                    <!-- Item 1: Freelance Web Developer -->
+                    <div class="py-6">
+                        <div class="font-mono text-xs text-muted mb-1">
+                            <!-- TODO: ganti periode -->
+                            Mar 2025 &mdash; Jun 2025
+                        </div>
+                        <!-- TODO: ganti jabatan/peran -->
+                        <h4 class="font-display text-2xl text-ink mb-1">PT Mutiara Putri Gemilang</h4>
+                        <!-- TODO: ganti nama klien/perusahaan -->
+                        <p class="font-mono text-xs text-muted mb-3">Internship</p>
+                        <ul class="list-disc list-outside ml-4 space-y-1.5 font-sans text-sm text-muted mb-4">
+                            <!-- TODO: ganti deskripsi kontribusi -->
+                            <li>Built a Decision Support System (DSS) for employee recruitment (Laravel, MySQL) using
+                                AHP and Profile Matching.</li>
+                            <li>Planned and ran Agile sprints for 3+ core web application features, delivering all on
+                                time and within scope.</li>
+                            <li>Coordinated task allocation, deliverable tracking, and quality assurance with
+                                stakeholders to match their requirements.</li>
+                        </ul>
+                        <div class="font-mono text-xs text-muted">
+                            <!-- TODO: sesuaikan tech/skill -->
+                            Laravel / Bootstrap
                         </div>
                     </div>
-                    <div class="p-8 flex flex-col flex-grow">
-                        <h4
-                            class="text-xl font-bold text-white mb-3 group-hover:text-brand-secondary transition-colors">
-                            HR Decision Support</h4>
-                        <p class="text-gray-400 text-sm mb-6 flex-grow">
+
+                    <!-- Item 2: Informatics Student -->
+                    <div class="py-6">
+                        <div class="font-mono text-xs text-muted mb-1">
+                            Sep 2024 &mdash; Des 2024
+                        </div>
+                        <h4 class="font-display text-2xl text-ink mb-1">IT Fullstack Developer Trainee</h4>
+                        <p class="font-mono text-xs text-muted mb-3">Rakamin Academy &mdash; Kampus Merdeka</p>
+                        <ul class="list-disc list-outside ml-4 space-y-1.5 font-sans text-sm text-muted mb-4">
+                            <li>Completed a 4-month IT Full Stack Developer program (Web Development & Data Science)
+                                under Kampus Merdeka’s MSIB.</li>
+                            <li>Built a Waste Management Education Website (Laravel, TailwindCSS, MySQL) with articles
+                                and interactive gamification, from UI/UX design in Figma through deployment.</li>
+                            <li>Served as Front-End Developer, building component-based interactive interfaces with
+                                responsive design and cross-browser compatibility.</li>
+                        </ul>
+                        <div class="font-mono text-xs text-muted">
+                            Laravel / FastAPI / Tailwind
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel 3: Projects Index -->
+            <div id="panel-projects" class="card-panel hidden space-y-8">
+                <div class="divide-y divide-rule border-t border-b border-rule">
+
+                    <!-- Project 01: SIMPELKESOS -->
+                    <article class="py-8">
+                        <div class="flex items-center gap-2 font-mono text-xs text-muted mb-2">
+                            <span>01</span>
+                            <span class="text-rule">/</span>
+                            <span class="font-semibold text-ink">SIMPELKESOS</span>
+                            <span class="text-rule">/</span>
+                            <span class="uppercase tracking-wider">GIS &amp; Social Mapping</span>
+                        </div>
+                        <!-- TODO: ganti judul naratif -->
+                        <h4 class="font-display text-2xl text-ink mb-2 leading-snug">
+                            A map that finally reveals who truly needs help.
+                        </h4>
+                        <p class="font-sans text-muted text-sm leading-relaxed text-pretty mb-3">
+                            A Web-based Geographic Information System (GIS) application to map and analyze the
+                            distribution of social assistance recipients in Mojokerto Regency.
+                        </p>
+                        <div class="flex flex-wrap items-center justify-between gap-4 pt-2 font-mono text-xs">
+                            <span class="text-muted">Laravel / Leaflet.js / AdminLTE</span>
+                            <a href="https://github.com/Ivunnn/SIMPELKESOS" target="_blank" rel="noopener noreferrer"
+                                class="link-editorial text-ink min-h-[40px] flex items-center">
+                                Source Code &rarr;
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project 02: HR Decision Support -->
+                    <article class="py-8">
+                        <div class="flex items-center gap-2 font-mono text-xs text-muted mb-2">
+                            <span>02</span>
+                            <span class="text-rule">/</span>
+                            <span class="font-semibold text-ink">HR System</span>
+                            <span class="text-rule">/</span>
+                            <span class="uppercase tracking-wider">Decision Support System</span>
+                        </div>
+                        <!-- TODO: ganti judul naratif -->
+                        <h4 class="font-display text-2xl text-ink mb-2 leading-snug">
+                            Hiring decisions, backed by numbers instead of gut feeling.
+                        </h4>
+                        <p class="font-sans text-muted text-sm leading-relaxed text-pretty mb-3">
                             A Website Based Decision Support System for Employee Recruitment using AHP Algorithm and
                             Profile Matching method.
                         </p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span
-                                class="px-3 py-1 text-xs font-medium bg-brand-secondary/10 text-brand-secondary rounded-full border border-brand-secondary/20">Laravel</span>
-                            <span
-                                class="px-3 py-1 text-xs font-medium bg-white/5 text-gray-300 rounded-full border border-white/10">AHP
-                                Algorithm</span>
+                        <div class="editorial-note">
+                            <!-- TODO: key achievement / challenge solved -->
+                            <p class="font-sans text-xs text-ink font-medium">
+                                Replacing a manual, subjective selection stage
+                            </p>
+                            <!-- TODO: catatan pendukung -->
+                            <p class="font-sans text-xs text-muted mt-0.5">
+                                with objective score-based ranking for >20 candidates per cycle.
+                            </p>
                         </div>
-                        <a href="https://github.com/Ivunnn/Sistem-Rekrutmen-Pegawai-AHP-Profile-Matching"
-                            target="_blank"
-                            class="inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-brand-secondary transition-colors">
-                            <i class="fa-brands fa-github text-lg"></i> Source Code
-                        </a>
-                    </div>
-                </div>
+                        <div class="flex flex-wrap items-center justify-between gap-4 pt-2 font-mono text-xs">
+                            <span class="text-muted">Laravel / AHP Algorithm / Profile Matching</span>
+                            <a href="https://github.com/Ivunnn/Sistem-Rekrutmen-Pegawai-AHP-Profile-Matching"
+                                target="_blank" rel="noopener noreferrer"
+                                class="link-editorial text-ink min-h-[40px] flex items-center">
+                                Source Code &rarr;
+                            </a>
+                        </div>
+                    </article>
 
-                <!-- Project 3 -->
-                <div class="glass rounded-3xl overflow-hidden reveal tilt-card flex flex-col group border border-white/5 hover:border-white/20 transition-colors"
-                    style="transition-delay: 200ms;">
-                    <div class="h-48 w-full bg-slate-800 relative overflow-hidden">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-br from-cyan-900 to-slate-800 opacity-80 group-hover:scale-105 transition-transform duration-500">
+                    <!-- Project 03: CycleTech -->
+                    <article class="py-8">
+                        <div class="flex items-center gap-2 font-mono text-xs text-muted mb-2">
+                            <span>03</span>
+                            <span class="text-rule">/</span>
+                            <span class="font-semibold text-ink">CycleTech</span>
+                            <span class="text-rule">/</span>
+                            <span class="uppercase tracking-wider">ML &amp; Sustainability</span>
                         </div>
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <i class="fa-solid fa-recycle text-5xl text-white/50"></i>
-                        </div>
-                    </div>
-                    <div class="p-8 flex flex-col flex-grow">
-                        <h4 class="text-xl font-bold text-white mb-3 group-hover:text-brand-accent transition-colors">
-                            CycleTech</h4>
-                        <p class="text-gray-400 text-sm mb-6 flex-grow">
+                        <!-- TODO: ganti judul naratif -->
+                        <h4 class="font-display text-2xl text-ink mb-2 leading-snug">
+                            Teaching a machine to sort your trash better than you do.
+                        </h4>
+                        <p class="font-sans text-muted text-sm leading-relaxed text-pretty mb-3">
                             Waste management educational website providing information and resources for the community
                             with machine learning integration.
                         </p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span
-                                class="px-3 py-1 text-xs font-medium bg-brand-accent/10 text-brand-accent rounded-full border border-brand-accent/20">Laravel</span>
-                            <span
-                                class="px-3 py-1 text-xs font-medium bg-white/5 text-gray-300 rounded-full border border-white/10">Hugging
-                                Face</span>
-                            <span
-                                class="px-3 py-1 text-xs font-medium bg-white/5 text-gray-300 rounded-full border border-white/10">Tailwind</span>
+                        <div class="editorial-note">
+                            <!-- TODO: key achievement / challenge solved -->
+                            <p class="font-sans text-xs text-ink font-medium">
+                                Served as Front-End Developer
+                            </p>
+                            <!-- TODO: catatan pendukung -->
+                            <p class="font-sans text-xs text-muted mt-0.5">
+                                building component-based interactive interfaces and responsive design and cross-browser
+                                compatibility.
+                            </p>
                         </div>
-                        <a href="https://github.com/Ivunnn/CycleTech" target="_blank"
-                            class="inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-brand-accent transition-colors">
-                            <i class="fa-brands fa-github text-lg"></i> Source Code
-                        </a>
-                    </div>
-                </div>
-                <!-- Project 4 -->
-                <div class="glass rounded-3xl overflow-hidden reveal tilt-card flex flex-col group border border-white/5 hover:border-white/20 transition-colors"
-                    style="transition-delay: 300ms;">
-                    <div class="h-48 w-full bg-slate-800 relative overflow-hidden">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-br from-amber-900 to-slate-800 opacity-80 group-hover:scale-105 transition-transform duration-500">
+                        <div class="flex flex-wrap items-center justify-between gap-4 pt-2 font-mono text-xs">
+                            <span class="text-muted">Laravel / Hugging Face / Tailwind</span>
+                            <a href="https://github.com/Ivunnn/CycleTech" target="_blank" rel="noopener noreferrer"
+                                class="link-editorial text-ink min-h-[40px] flex items-center">
+                                Source Code &rarr;
+                            </a>
                         </div>
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <i class="fa-solid fa-truck-fast text-5xl text-white/50"></i>
+                    </article>
+
+                    <!-- Project 04: Delivery Tracking -->
+                    <article class="py-8">
+                        <div class="flex items-center gap-2 font-mono text-xs text-muted mb-2">
+                            <span>04</span>
+                            <span class="text-rule">/</span>
+                            <span class="font-semibold text-ink">Delivery Tracking System</span>
+                            <span class="text-rule">/</span>
+                            <span class="uppercase tracking-wider">Logistics &amp; Tracking</span>
                         </div>
-                    </div>
-                    <div class="p-8 flex flex-col flex-grow">
-                        <h4 class="text-xl font-bold text-white mb-3 group-hover:text-amber-400 transition-colors">
-                            Delivery Tracking Unit System</h4>
-                        <p class="text-gray-400 text-sm mb-6 flex-grow">
-                            <!-- TODO: Ganti dengan deskripsi proyekmu -->
+                        <!-- TODO: ganti judul naratif -->
+                        <h4 class="font-display text-2xl text-ink mb-2 leading-snug">
+                            Knowing exactly where every unit is, all the time.
+                        </h4>
+                        <p class="font-sans text-muted text-sm leading-relaxed text-pretty mb-3">
                             Laravel-based web app for managing and tracking vehicle unit deliveries across admin,
                             driver, and customer roles.
                         </p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <!-- TODO: Sesuaikan tag teknologi yang dipakai -->
-                            <span
-                                class="px-3 py-1 text-xs font-medium bg-amber-500/10 text-amber-400 rounded-full border border-amber-500/20">Laravel</span>
-                            <span
-                                class="px-3 py-1 text-xs font-medium bg-white/5 text-gray-300 rounded-full border border-white/10">GPS
-                                Tracking</span>
-                            <span
-                                class="px-3 py-1 text-xs font-medium bg-white/5 text-gray-300 rounded-full border border-white/10">Tailwind</span>
+                        <div class="editorial-note">
+                            <!-- TODO: key achievement / challenge solved -->
+                            <p class="font-sans text-xs text-ink font-medium">
+                                Implemented real-time tracking and role-based access control
+                            </p>
+                            <!-- TODO: catatan pendukung -->
+                            <p class="font-sans text-xs text-muted mt-0.5">
+                                with Leaflet.js and Laravel's built-in authentication system, ensuring secure and
+                                efficient delivery management.
+                            </p>
                         </div>
-                        <a href="https://github.com/Ivunnn/Delivery-Tracking-Unit-App" target="_blank"
-                            class="inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-amber-400 transition-colors">
-                            <i class="fa-brands fa-github text-lg"></i> Source Code
+                        <div class="flex flex-wrap items-center justify-between gap-4 pt-2 font-mono text-xs">
+                            <span class="text-muted">Laravel / Leaflet.js / Tailwind</span>
+                            <a href="https://github.com/Ivunnn/Delivery-Tracking-Unit-App" target="_blank"
+                                rel="noopener noreferrer"
+                                class="link-editorial text-ink min-h-[40px] flex items-center">
+                                Source Code &rarr;
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Takeaway Synthesis Block -->
+                    <article class="py-8">
+                        <div class="flex items-center gap-2 font-mono text-xs text-muted mb-2">
+                            <span>05</span>
+                            <span class="text-rule">/</span>
+                            <span class="font-semibold text-ink">Takeaway</span>
+                            <span class="text-rule">/</span>
+                            <span class="uppercase tracking-wider">Synthesis</span>
+                        </div>
+                        <!-- TODO: ganti judul penutup -->
+                        <h4 class="font-display text-2xl text-ink mb-2 leading-snug">
+                            One developer, four different problems solved.
+                        </h4>
+                        <!-- TODO: ganti ringkasan penutup -->
+                        <p class="font-sans text-muted text-sm leading-relaxed text-pretty mb-4">
+                            From GIS mapping to logistics tracking, each project above was built end-to-end — from
+                            database design to the interface people actually use.
+                        </p>
+                        <a href="https://github.com/Ivunnn" target="_blank" rel="noopener noreferrer"
+                            class="link-editorial font-mono text-xs text-ink min-h-[40px] inline-flex items-center">
+                            GitHub &rarr;
+                        </a>
+                    </article>
+
+                </div>
+            </div>
+
+            <!-- Panel 4: Contact Inquiry -->
+            <div id="panel-contact" class="card-panel hidden space-y-6">
+                <div>
+                    <h3 class="font-display text-3xl sm:text-4xl text-ink leading-tight mb-4">
+                        Let's build something <span class="italic">amazing together.</span>
+                    </h3>
+                    <p class="font-sans text-muted text-base leading-relaxed text-pretty mb-8">
+                        Open for freelance opportunities, full-time roles, and web development collaborations. Feel free
+                        to reach out!
+                    </p>
+                    <div class="p-6 border border-rule bg-paper">
+                        <p class="font-mono text-xs text-muted uppercase tracking-wider mb-2">Direct Email Address:</p>
+                        <a href="mailto:herdiantoivan45@gmail.com"
+                            class="font-display text-2xl sm:text-3xl text-ink link-editorial block break-all">
+                            E-mail
                         </a>
                     </div>
                 </div>
+
+                <div class="pt-6 border-t border-rule flex items-center gap-6 font-mono text-xs text-muted">
+                    <a href="https://github.com/Ivunnn" target="_blank" rel="noopener noreferrer"
+                        class="link-mono min-h-[40px] flex items-center">
+                        GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/ivan-herdianto/" target="_blank" rel="noopener noreferrer"
+                        class="link-mono min-h-[40px] flex items-center">
+                        LinkedIn
+                    </a>
+                </div>
             </div>
+
         </div>
-    </section>
+    </aside>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-24 px-6 md:px-12 relative z-10">
-        <div
-            class="max-w-4xl mx-auto glass rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden reveal border border-white/10">
-            <!-- Inner Glow -->
-            <div
-                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gradient-to-b from-brand-primary/20 to-transparent blur-3xl z-[-1]">
-            </div>
-
-            <h2 class="text-4xl md:text-5xl font-black text-white mb-6">Let's build something <br><span
-                    class="text-gradient">amazing together.</span></h2>
-            <p class="text-gray-400 text-lg mb-10 max-w-2xl mx-auto">
-                Open for freelance opportunities, full-time roles, and web development collaborations. Feel free to
-                reach out!
-            </p>
-            <a href="mailto:herdiantoivan45@gmail.com"
-                class="inline-flex items-center justify-center gap-2 md:gap-3 px-5 py-3 md:px-8 md:py-4 rounded-full bg-white text-brand-dark font-bold text-sm md:text-lg hover:scale-105 hover:shadow-[0_0_40px_rgba(255,255,255,0.3)] transition-all duration-300 max-w-full">
-                <i class="fa-regular fa-envelope shrink-0"></i> <span class="break-all md:break-normal">Email</span>
-            </a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="border-t border-white/5 pt-12 pb-8 px-6 text-center relative z-10">
-        <div class="flex justify-center gap-6 mb-6">
-            <a href="https://github.com/Ivunnn" target="_blank"
-                class="w-10 h-10 rounded-full glass flex items-center justify-center text-gray-400 hover:text-white hover:-translate-y-1 hover:bg-brand-primary/20 transition-all">
-                <i class="fa-brands fa-github text-xl"></i>
-            </a>
-            <a href="mailto:herdiantoivan45@gmail.com"
-                class="w-10 h-10 rounded-full glass flex items-center justify-center text-gray-400 hover:text-white hover:-translate-y-1 hover:bg-brand-primary/20 transition-all">
-                <i class="fa-regular fa-envelope text-xl"></i>
-            </a>
-        </div>
-        <p class="text-gray-500 text-sm">
-            &copy; 2026 Ivan Herdianto.
-        </p>
-    </footer>
-
-    <!-- Scripts -->
-    <!-- Lenis for Smooth Scrolling -->
-    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
-    <!-- Vanilla Tilt for 3D card effects -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
-    <!-- Custom Scripts -->
-    <script src="/script.js"></script>
+    <!-- Custom Script -->
+    <script src="script.js" defer></script>
 </body>
 
 </html>
