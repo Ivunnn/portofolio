@@ -5,7 +5,7 @@
 
 /**
  * Terminal boot screen. Fixed timeline (~2.7s): it does not wait for the network.
- * Click or any key skips it. Fires "boot:done" when the page should be revealed.
+ * Cannot be skipped. Fires "boot:done" when the page should be revealed.
  */
 (function runBootSequence() {
     const screen = document.getElementById("boot-screen");
@@ -98,8 +98,7 @@
         tick = setInterval(() => setProgress(Math.min(1, (performance.now() - t0) / READY_AT)), 40);
     }
 
-    screen.addEventListener("click", finish);
-    document.addEventListener("keydown", finish, { once: true });
+    // Boot screen cannot be skipped — it always runs to completion.
 })();
 
 document.addEventListener("DOMContentLoaded", () => {
